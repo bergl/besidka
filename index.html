@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/besidka.min.css" type="text/css" />
+    <!--link rel="stylesheet" href="css/besidka.css" type="text/css" />
+    <link rel="stylesheet" href="css/objednavka.css" type="text/css" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css"/-->
+    <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+    <link rel="shortcut icon" href="http://www.besidka.cz/img/favicon.ico" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Design Hotel Besídka</title>
+</head>
+<body>
+    <div id="fb-root"></div>
+    <div id="bd">
+        <div class="columns">
+            <div class="column">
+                <div class="tile middle logo noanim">
+                    <img src="img/logo2.png"/>
+                    <div class='nadpis'><a href="">DESIGN HOTEL</a> <span><a href="" data-res="title_restaurace">RESTAURACE</a></span></div>
+                </div>
+                <div class="tile small overview noanim opener">
+                    <img src="img/star2.png"/>
+                    <div class="nadpis ACTIVE" data-res="rooms">POKOJE</div>
+                    <div class="content"> <!-- generate -->
+                        <div class="tile small room" data-room="ZAMPIC"></div>
+                        <div class="tile small room" data-room="HANAK"></div>
+                        <div class="tile small room" data-room="KORYS"></div>
+                        <div class="tile small room" data-room="GENA"></div>
+                        <div class="tile small room" data-room="BOHAC"></div>
+                        <div class="tile small room" data-room="KOUTAK"></div>
+                        <div class="tile small room" data-room="VAVRA"></div>
+                        <div class="tile small room" data-room="KUSIAK"></div>
+                        <div class="tile small room" data-room="HATY"></div>
+                        <div class="tile small room" data-room="VRBA"></div>
+                        <div class="tile small room" data-room="CEPLECHA"></div>
+                        <div class="tile small room" data-room="KOUCKY"></div>
+                        <div class="tile small room" data-room="RENESANCE"></div>
+                        <div class="tile small  noanim backhouse"></div>
+                    </div>
+                </div>
+                <div class="tile small order actionable">
+                    <div class="roomName ACTIVE" data-res="order_room">OBJEDNAT POKOJ</div>
+                </div>
+                <div class="tile biggest noanim preview"></div>
+                 <div class="tile small contact opener">
+                    <div class='nadpis' data-res="contact">KONTAKT</div>
+                    <div class="content">
+                        <div class="text">
+                            <div style="width: 50%; float: left; padding-bottom: 20px;">
+                                Horní náměstí 522 
+                                Slavonice 37881 
+                                Czech Republic 
+                                <a href="MAILTO:besidka@besidka.cz">besidka@besidka.cz</a>
+                            </div>
+                            <div style="width: 50%; float: left;">
+                                Restaurace:<br/><a href="tel:+420384493293">+420 384 493 293</a>
+                                Hotel:<br/><a href="tel:+420606212070">+420 606 212 070</a>
+                            </div>
+                        </div>
+                        <div id="gmap"></div>
+                    </div>
+                </div>                 
+                <div class="tile small booking">
+                    <a href="http://www.booking.com/hotel/cz/besidka.html?aid=330843;lang=en-us" target="_blank">
+                        <img src="img/booknow_en-us.gif"/>
+                    </a>
+                </div>  
+            </div>
+            <div class="column second">
+                <div class="tile middle room" data-room="VAVRA"></div>
+                <div class="tile small room" data-room="ZAMPIC"></div>
+                <div class="tile small room" data-room="KUSIAK"></div>
+                <div class="tile small room" data-room="GENA"></div>
+                <div class="tile small room" data-room="BOHAC"></div>
+                <div class="tile middle room" data-room="KOUTAK"></div>
+                <div class="tile small room" data-room="VRBA"></div>
+                <div class="tile small noanim backhouse"></div>
+                <div class="tile middle poukaz noanim opener">
+                    <div class="nadpis ACTIVE" data-res="gift_certificate">DÁRKOVÝ POUKAZ</div>
+                    <p>Chcete obdarovat své blízké a přátele ?</p>
+                    <p>Připravili jsme pro vás dárkový poukaz, který je příležitostí vybrat přesně to, co potřebujete. Je jen na vás, zda to bude večeře, pobyt v hotelu, keramika či vše dohromady.Pokud budeme schopni splníme vaše přání. Napište nám nebo zavolejte.
+                    </p>
+                    <p>besidka@besidka.cz<br/> +420 606 212 070</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="tile small prices opener">
+                    <div class='nadpis' data-res="prices">CENY</div>
+                    <div class="text content">
+                        <table>
+                          <thead><td></td><td>sezóna<br />1.6 - 30.9<br /> 20.12 - 6.1</td><td>mimosezóna<br />7.1 - 30.5<br /> 1.10 - 19.12</td></thead>
+                            <tr><td>Dvoulůžkový pokoj se snídaní&nbsp;&nbsp;&nbsp;</td><td>1490 Kč</td><td align="center">1290 Kč</td></tr>
+                            <tr><td>- 1 osoba</td><td>1290 Kč</td><td align="center">990 Kč</td></tr>
+                            <tr><td>Pokoj Pan Korýs</td><td>1290 Kč</td><td align="center">1190 Kč</td></tr>
+                            <tr><td>Extra classe (Haty, Vávra, Koucký a Boháč)</td><td>1490 Kč</td><td align="center">1490 Kč</td></tr>
+                            <tr><td>- 1 osoba</td><td>1290 Kč</td><td align="center">1290 Kč</td></tr>
+                            <tr><td>Přistýlka</td><td>490 Kč</td><td align="center">490 Kč</td></tr>
+                            <tr><td>Pes</td><td>200 Kč</td><td align="center">200 Kč</td></tr>
+                            <tr><td>Děti do 3 let</td><td>ZDARMA&nbsp;&nbsp;</td><td></td></tr>
+                            <tr><td>Děti do 12 let</td><td>1/2 ceny</td><td></td></tr>
+                        </table>
+                        <ul>
+                            <li>Ceny ateliérů dle dohody</li>
+                            <li>Výjimky existují !</li>
+                        </ul>
+                        <center>Check-in od 14.00, check-out do 11.00.</center>
+                    </div>
+                </div>
+                <div class="tile small room" data-room="VRBA"></div>
+                <div class="tile small room" data-room="KOUCKY"></div>
+                <div class="tile small room" data-room="HANAK"></div>
+                <div class="tile middle room" data-room="CEPLECHA"></div>
+                <div class="tile small room" data-room="KORYS"></div>
+                <div class="tile small room" data-room="RENESANCE"></div>
+                <div class="tile middle room" data-room="HATY"></div>                
+                <div class="tile middle noanim opener besidkaText"  data-res="besidka_text">
+                    <p>
+                        „Besídka„ je místem setkání, restaurací, hotelem vyhřezávajícím až do nově otevřeného hostelu „Modrá hvězda“v sousedním propojeném domě, ale i keramickou a textilní dílnou, kde můžete malovat hrnečky nebo tisknout trička.
+                    </p>
+                    <p>
+                        Tento dům koupilo 27.6. 1988 sedm statečných z  divadla Sklep a Manželka národů, totalita byla tou dobou tak hluboká, že si neviděli na špičku nosu a nejdál byli v kredenci.
+                    </p>
+                    <p>
+                        Citát z dob kdy „Besídka“ byla jen divadelně literární formou, než se zhmotnila do podoby domu s  restaurací a barem coby hlavou, břišní kuchyní a jaterně-ledvinovým sklepem a srdcem v  renesančním sále, který není vůbec renesanční.
+                    </p>                    
+                </div>                
+            </div>
+            <div class="column last">
+                <div class="tile facebook">
+                    <div class="fb-like-box" data-href="https://www.facebook.com/pages/Bes&#xed;dka-Slavonice/136572019720657" data-width="310" data-show-faces="true" data-stream="true" data-show-border="false" data-header="false"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+    <div id="contentLoader">
+        <div class="roomContent">
+            <div class="imgCont">
+                <img src="" id="roomImg" class="actionable" width="320" height="457" onclick="zoom();"/>
+                <div class="zoomer actionable" onclick="zoom();"></div>
+                <div class="closer actionable" onclick="disposeFullScreen();"></div>
+            </div>
+            <div id="roomText">
+                <p id="roomDesc"></p>
+                <p>
+                    <span data-res="capacity" class="roomInfo">Kapacita:</span> <span id="capacity">2 + 2</span> (<span id="acreage">44</span> m<sup>2</sup>)<br/>
+                    <span data-res="price" class="roomInfo">Cena:</span> <span id="price">1290</span>,- <span data-res="price_per_night">Kč/noc</span> <br />
+                    <span data-res="price_season" class="roomInfo">Cena sezóně:</span> <span id="price_seaon">1490</span>,- <span data-res="price_per_night">Kč/noc</span> <br />
+                </p>
+                <a href="#" id="roomOrderLink" data-res="order_room">OBJEDNAT POKOJ</a>
+                <div class="roomThumbs"></div>    
+            </div>
+            <div id="clearer"></div>
+        </div>
+        <div class="orderContent">
+        <div id="room_select" class="tab">
+              <span class="label mand" data-res="selected_room">Vybraný pokoj:</span>
+              <select id="room" class="required control">
+                  <option value="BOHAC">Pan BOHÁČ (Extra classe 2 + 4)</option>
+                  <option value="GENA">MANŽELKA NÁRODŮ (Pokoje 2 + 2)</option>
+                  <option value="HANAK">Pan HANÁK (Pokoje 2 + 4)</option>
+                  <option value="KORYS">Pan KORÝS (Pokoje 2 + 0)</option>
+                  <option value="KOUTAK">Pan KOUŤÁK (Pokoje 2 + 2)</option>
+                  <option value="KUSIAK">Pan KUŠIAK (Pokoje 2 + 4)</option>
+                  <option value="VAVRA">Pan VÁVRA (Extra classe 2 + 4)</option>
+                  <option value="ZAMPA">Pan ŽAMPA (Pokoje 2 + 1)</option>
+                  <option value="KOUCKY">Pan KOUCKÝ (Extra classe 2 + 2)</option>
+                  <option value="CEPLECHA">Pan CEPLECHA (Pokoje 2 + 2)</option>
+                  <option value="VRBA">Pan VRBA (Pokoje 2 + 2)</option>
+                  <option value="HATY">HATY (Pokoje 2 + 2)</option>
+                  <option value="RENESANCE">RENESANCE (Konferenční sál)</option>
+                  <option value="HOSTEL">HOSTEL</option>
+              </select>     
+              <span class="label mand" data-res="people_count">Počet osob (bez dětí):</span><input class="required countable" type="text" value="2" id="pocet_osob" /> <a id="add_kids" onclick="addKids(); return false;" href="#err" data-res="add_kids"> Přidat děti</a> 
+              <div id="to3" class="hidden">
+                <span class="label" data-res="kids3">Děti do 3 let (zdarma):</span><input type="text" value="0" class="countable" id="pocet_deti3" />
+                <span class="label" data-res="kids312">Děti od 3 do 12 let (sleva 50%):</span><input type="text" class="countable" value="0" id="pocet_deti312" />            
+              </div>
+              <span class="label">Počet osob:</span>osob (<span id="max_persons"></span>), přistýlek (<span id="add_bed"></span>)
+              <span class="label mand" data-res="nights">Počet nocí:</span> <input class="required countable" type="text" value="2" id="pocet_noci" />
+              <span class="label mand" data-res="date_arrive">Datum příjezdu:</span> <input id="date_arrive" class="required datum" type="text" value=""/> <span class="help" data-res="date_arrive_note">zobrazí obsazenost pokoje</span>
+              <span class="label" data-res="date_departure">Datum odjezdu:</span> <input id="date_out" type="text" value="" disabled class="datum"/>
+              <span class="label" data-res="approx_price">Přibližná cena (beze slev):</span> <span class="tmpPrice"></span>
+        </div>
+        <div id="order_details" class="hidden tab">          
+            <span class="label mand" data-res="name">Jméno:</span><input id="finame" class="required" type="text" value=""/>
+            <span class="label mand" data-res="fname">Příjmení:</span><input id="faname" class="required" type="text" value=""/>
+            <span class="label mand" data-res="mail">Email:</span><input id="email" class="required email" type="text" value=""/>
+            <span class="label mand" data-res="telephone">Telefon:</span><input id="tel" class="required" type="text" value=""/>
+            <span class="label" data-res="city">Město:</span><input id="city" type="text" value=""/>
+            <span class="label" data-res="street">Ulice:</span><input id="street" type="text" value=""/>
+            <span class="label" data-res="psc">PSČ:</span><input id="psc" type="text" value=""/>
+            <span class="label" data-res="nationality">Státní příslušnost:</span><input id="nat" type="text" value=""/>
+        </div>  
+        <div id="services" class="hidden tab">
+            <span class="label" data-res="extra_bed">Přistýlka:</span><input id="extra_bed" class="countable" type="text" value="0"/> 490 kč/den
+            <span class="label" data-res="dog">Pes:</span><input id="dog" class="countable" type="text" value="0"/> 200 kč/den
+            <span class="label" data-res="tin_bed">Děstská postýlka:</span><input id="tiny_bed" class="countable" type="text" value="0"/> Zdarma
+            <span class="label" data-res="voucher">Číslo voucheru:</span><input id="voucher" type="text" value=""/> Musí být číslo
+            <span class="label" data-res="note">Poznámka:</span><textarea cols="20" rows="3" id="note"></textarea>          
+        </div>       
+        <div id="order" class="hidden tab">
+              <div id="order_table">
+                <span class="label mand" data-res="personal_data">Osobní údaje:</span>
+                <table>
+                  <tr><td class="mand" data-res="name">Jméno:</td><td id="fill_name"></td></tr>
+                  <tr><td class="mand" data-res="mail">Email:</td><td id="fill_email"></td></tr>
+                  <tr><td class="mand" data-res="telephone">Telefon:</td><td id="fill_tel"></td></tr>
+                  <tr><td data-res="city">Město:</td><td id="fill_city"></td></tr>
+                  <tr><td data-res="street">Ulice:</td><td id="fill_street"></td></tr>
+                  <tr><td data-res="psc">PSČ:</td><td id="fill_psc"></td></tr>
+                  <tr><td data-res="nationality">Státní přislušnost:</td><td id="fill_nat"></td></tr>
+                </table>  
+              </div>                  
+              <div id="order_table2">
+                <span class="label mand">Detaily rezervace:</span>
+                <table>
+                  <tr><td data-res="room">Pokoj:</td><td id="fill_room"></td></tr>
+                  <tr><td data-res="people_count" class="mand">Počet osob:</td><td id="fill_person"></td></tr>
+                  <tr><td data-res="nights" class="mand">Počet nocí:</td><td id="fill_nights"></td></tr>
+                  <tr><td data-res="date_arrive" class="mand">Datum příjezdu:</td><td id="fill_arrive"></td></tr>
+                  <tr><td data-res="date_departure">Datum odjezdu:</td><td id="fill_dep"></td></tr>
+                  <tr><td data-res="kids3">Počet dětí do 3 let:</td><td id="fill_kids3"></td></tr>
+                  <tr><td data-res="kids312">Děti od 3 do 12 let:</td><td id="fill_kids312"></td></tr>
+                </table>  
+              </div>
+              <span class="label mand" data-res="ordered_services">Objednané služby:</span>
+              <div id="ordered_services"></div><br />
+              <span class="label mand" data-res="approx_price">Přibližná cena (beze slev):</span><span class="tmpPrice"></span>                             
+        </div>
+        <div id="tn_navigation">
+          <div id="tn_room_select"><input type="button" value="Zavřít" onClick='hideContentLoader();'><input type="button" value="2. Osobní Údaje >>" onClick='showOrderDetails();'></div>
+          <div id="tn_order_details" class="hidden"><input type="button" value="<< 1. Výběr pokoje" onClick='showRoomSelect();'><input type="button" value="3. Služby >>" onClick='showServices();'></div>
+          <div id="tn_services" class="hidden"><input type="button" value="<< 2. Osobni udaje" onClick='showOrderDetails();'><input type="button" value="4. Objednávka >>" onClick='showOrderOverview();'></div>    
+          <div id="tn_order" class="hidden"><input type="button" value="<< 3. Služby" onClick="showServices();"><input type="button" id="finalOrder" value="Objednat"></div>
+        </div>                                
+        <div id="overall" class="hidden">
+        </div>  
+
+        </div>
+    </div>  
+    <div id="imageLoader">
+        <img id="imageLoaderImg" />
+        <div class="navBut prev"></div>
+        <div class="navBut next"></div>
+        <div class="navBut closer"></div>
+    </div>
+    <div class="flags">
+        <img src="img/flag_gb.gif" class="flag" data-lang="en"/>
+        <img src="img/flag-cs.png" class="flag" data-lang="cs"/>
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-ui-1.11.2.min.js"></script>
+    <!--script src="js/localization.js"></script>
+    <script src="js/rooms.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/order.js"></script>
+    <script src="js/besidka.js"></script>
+    <script src="js/map.js"></script-->
+    <script src="js/besidka.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+#foto {
+	background-image: url(../img/bohac0.jpg);
+}
+
+IMG {
+	border-width: 0px;
+}
+
+#overall table {
+  font-size: 10px; 
+}
+
+.tab_header {
+	width: 160px;
+  padding-left: 10px;
+	_width: 102px;
+	text-align: left;
+	margin-top: 0px;
+  float: left;
+	line-height: 22px;
+  cursor: hand;	
+  height: 410px;
+  background-color: #fff;
+  opacity: 0.7;
+  filter:alpha (opacity=70);
+}   
+
+#hd_room_select {
+  padding-top: 45px;
+}
+
+.tab_header SPAN {
+  cursor: pointer;
+}
+
+a.fRoom {
+  display: inline-block;
+  padding: 3px;
+  margin: 3px;
+  background-color: #fff;
+}
+
+#date_out {
+  background-color: #EEEEEE;
+}
+
+.selected, .monthName {
+	color: #8b0000;
+}
+
+.tab_nav {
+	width: 287px;
+	text-align: left;
+	height: 40px;
+}
+
+.notvisited {
+  cursor: default !important;
+  opacity: 0.5;
+  filter:alpha (opacity=50);
+}
+
+#room_select TD
+{
+  width: 250px;
+}
+
+.tab_header span
+{
+  width: 287px;
+  _width: 102px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: block;
+}
+
+.hidden {
+	display: none;
+}
+
+.tab {
+	padding-left: 20px;
+  	position: relative;
+	text-align: left;	
+	font-family: "Trebuchet MS";
+	font-size: 13px;
+	padding-top: 10px;
+	/* height: auto; */
+	/* width: 100%; */
+	background-color: #fff;
+	font-weight: normal;
+	color: #000;
+	min-height: 287px;	
+}
+
+.tab TABLE{
+  font-family: "Trebuchet MS";
+  font-size: 13px;  	
+  font-weight: bold;
+}
+
+.tab A {
+	font-weight: bold;
+	font-size: 13px;
+	color: #8B0000;  
+	text-decoration: none;
+}
+
+#tn_navigation {
+  	text-align: right;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 20px;
+	padding-bottom: 13px;	
+	height: auto;
+}
+#tn_navigation input {
+	height: 40px;
+	width: 130px;
+	cursor: Hand;
+}
+
+#tn_navigation DIV {
+	padding-right: 13px;
+}
+
+.label {
+	width: 300px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	display: inline-block;
+}
+
+.decrease,.increase {
+  height: 22px;
+  width: 22px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.decrease {
+	margin-left: 0;
+}
+
+.mand {
+	font-weight: bold;
+}
+#bd {
+	height: 567px;
+}
+
+.countable {
+	width: 30px;
+}
+.datum {
+	width: 80px;
+}
+TR {
+	height: 21px;
+}
+#order_table TR, #order_table2 TR {
+	height: 20px;
+	font-size: 13px;
+	color: black;
+	font-weight: normal;	
+}
+#ordered_services {
+	font-size: 12px;
+	font-weight: normal;
+}
+#order_table,#order_table2 {
+	margin: 0px;
+	position: relative;
+	float: left;
+	width: 50%;
+	min-width: 267px;
+}
+#pridat_deti {
+	margin-left: 10px;
+}
+#reklama {
+	width: 861px;
+	text-align: right;
+	margin: auto;
+	font-size: 12px;
+}
+.help {
+  font-size: 12px;
+  font-style: italic;
+}
+
+#calendars TABLE {
+  margin-top: 20px;
+  margin-right: 20px;
+  position: relative;
+  float: left;
+  width: 200px;
+}
+
+#calendars TR {
+  height: 15px;
+}
+
+.free_room A {
+  color: green !important;
+}
+
+.occupied_room SPAN {
+  color: red !important;
+}
+
+.old_date SPAN {
+  color: gray !important;
+}
+#freeRooms {
+  line-height: 10px;
+  margin-top: 75px;  
+}
+
+.free {
+  color: #00a700;
+  cursor: pointer;
+}
+
+.freerooms A,.freerooms A:hover {
+  color: #060;
+}
+                
+#freecontent {
+  line-height: 20px;
+}
+#overall table {
+  font-weight: bold;
+  font-size: 12px;
+}
+#overall TD {
+  width: 85px;
+  height: 10px;
+}
+#overall TH {
+  font-size: 10px;
+}
+#overall .occup  {
+  background-color: #fe120e;
+  width: 16px;
+}
+#overall .free {
+  background-color: #13eba3;
+  width: 16px;
+}
+.collapsed #foto {
+  width: 106px;
+  background-position: right;
+}
+.collapsed #txt {
+  width: 755px;
+}
+.collapsed #overall {
+  width: 100%;
+  padding-left: 20px;
+}
+.collapsed .tab_header {
+  margin-left: 0px;
+}

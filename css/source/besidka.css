@@ -1,0 +1,764 @@
+body {
+    margin: 0px;
+    margin-bottom: 40px;
+    background-color: rgb(54, 54, 54);
+    background: linear-gradient(rgb(15, 15, 15), rgb(54, 54, 54));
+}
+
+.navBut {
+    width: 41px;
+    height: 41px;
+    background-color: rgba(255, 255, 255, 0.5); 
+    position: fixed;
+    top: 50%;
+    margin-top: -20px;
+    display: none;
+}
+
+    .navBut.closer {
+        top: 0;
+        left: 0;    
+        margin-top: 0px;
+        background-image: url('../img/close2.png');
+    }
+
+        .navBut.closer:hover {
+            background-image: url('../img/close2-hover.png');
+        }
+
+    .navBut.prev {
+        background-image: url('../img/arrow-left.png');
+        left: 0;
+    }
+
+        .navBut.prev:hover {
+            background-image: url('../img/arrow-left-hover.png');
+        }    
+
+    .navBut.next {
+        background-image: url('../img/arrow-right.png');
+        right: 0;
+    }
+
+        .navBut.next:hover {
+            background-image: url('../img/arrow-right-hover.png');
+        }        
+
+#imageLoader {
+    width: 100%;
+    height: 0;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    text-align: center;
+}
+
+    #imageLoader img {
+        max-width: 100%;
+        margin: auto;
+        position: relative;
+        max-height: 100%;
+    }
+
+    #imageLoader.FULLSCREEN {
+        top: 20px;
+        left: 20px;
+        transition: 0.2s left, 0.2s width, 0.2s top, 0.2s height, 0.2s 0.2s box-shadow;
+    }
+
+        #imageLoader.FULLSCREEN img {
+            box-shadow: 0 0 10px black, 0 0 0 1999px rgba(0,0,0,.8);
+        }
+
+        #imageLoader.FULLSCREEN .navBut {
+            display: block;
+        }
+
+#roomText {
+    float: left;
+    width: 290px;
+    padding: 15px;
+    background-color: white;
+}
+
+    #roomText a {
+        font-weight: bold;
+    }
+
+#roomDesc {
+    width: 100%;
+    margin-top: 0px;
+}
+
+.roomInfo {
+    font-weight: bold;
+    width: 102px;
+    display: inline-block;
+}
+
+#clearer {
+    clear: both;
+    height: 0px;
+}
+
+#roomOrderLink {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #603a83;
+}
+
+    #roomOrderLink:hover {
+       
+    }
+
+div#contentLoader {
+    background-color: white;
+    display: none;
+    position: absolute;
+    overflow: visible;
+    box-shadow: 0 0 10px black, 0 0 0 999px transparent;
+    
+}
+
+    div#contentLoader div.imgCont {
+        float: left;
+        position: relative;
+        height: 457px;
+    }
+
+    div#contentLoader .closer,
+    div#contentLoader .zoomer {
+        position: absolute;
+        top: 401px;
+        left: 13px;     
+        width: 41px;
+        height: 41px;        
+        background-image: url('../img/zoom.png');
+    }
+
+        div#contentLoader .zoomer:hover {
+            background-image: url('../img/zoom-hover.png');
+        }        
+
+    div#contentLoader .closer {
+        left: auto;
+        right: 17px;
+        background-image: url('../img/close2.png');
+    }
+
+        div#contentLoader .closer:hover {
+            background-image: url('../img/close2-hover.png');
+        }    
+
+    div#contentLoader div.orderContent {
+        display: none;
+    }
+
+    div#contentLoader div {
+        opacity: 0;
+    }
+
+    div#contentLoader.FULLSCREEN, 
+    div#contentLoader.HIDING {
+        box-shadow: 0 0 10px black, 0 0 0 1999px rgba(0,0,0,.6);
+        transition: 0.2s left, 0.2s width, 0.2s top, 0.2s height, 0.2s 0.2s box-shadow;
+    }
+
+div.pp {
+    background-image: url('../img/besidkaNEW.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 115px;
+}
+
+.overview {
+    background-color: #3A026F;
+    background-image: url('../img/overview.jpg');
+    overflow: hidden;
+}
+
+    .overview  img {
+        float: left;
+        width: 92px;
+        margin-left: 29px;
+        margin-top: 10px;        
+    }
+
+
+    .overview  div.content {
+        padding-left: 5px;  
+    }
+
+    div.tile.middle.overview.OPEN {
+        height: 1205px;
+    }
+
+.backhouse {
+    background-image: url('../img/newrooms.jpg');
+}
+
+h2.prehled {
+    color: white;
+    font-size: 19px;
+    line-height: 11px;
+    margin-left: 10px;
+}
+
+div.roomName, div.nadpis {
+    opacity: 0;
+    padding: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: black;
+    margin-top: 112px;
+    text-align: center;
+    cursor: pointer;
+}
+
+div.room, div.opener, div.actionable {
+    cursor: pointer;
+}
+
+div.roomName.ACTIVE {
+    opacity: 0.7; 
+    color: white; 
+}
+
+div.nadpis {
+    opacity: 0.7;
+    color: #fff;
+}
+
+div.room:hover div.roomName {
+    opacity: 0.7;
+    transition: opacity 0.5s;
+}
+
+div.tile div.tile {
+    margin: 0;
+}
+
+    div.tile div.tile:hover {
+        box-shadow: none;
+    }
+
+    div.tile div.tile div.roomName {
+        opacity: 0.7;
+    }
+
+div.miniRoom {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    color: white;
+}
+
+    div.miniRoom div.photo {
+        background-image: url('../img/hanak0BIG.jpg');
+        background-size: cover;
+        width: 110px;
+        height: 152px;
+    }
+
+    div.miniRoom > div {
+        float: left;
+        width: 180px;
+        padding-left: 8px;
+    }
+
+div.flags {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#gmap {
+    width: 100%;
+    height: 380px;
+}
+
+div#contentLoader.FULLSCREEN div {
+    opacity: 1;
+    transition-delay: 0.2s;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+}
+
+div#bd {
+    margin: auto;
+    margin-top: 40px;
+    width: 1400px;
+}
+
+div.columns {
+    width: 100%;
+}
+
+div.column {
+    width: 380px;
+    float: left;
+    transition-property: width;
+    transition-duration: 0.5s;
+}
+
+@media only screen and (max-width : 1300px) {
+    div.column {
+        width: 320px;
+    }
+}
+
+@media only screen and (max-width : 1100px) {
+    div#bd {
+        width: 1100px;
+    }
+}                                                                                                                                   
+
+@media only screen and (max-width : 830px) {
+    div#bd {
+        width: 830px;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    div#bd {
+        width: 100%;
+        margin-top: 0px;
+    }
+}
+
+div.column.last {
+    width: 320px;
+}
+
+div.column.second {
+    width: 320px;
+}
+
+img.star {
+    width: 100px;
+    float: right;
+    margin-top: 44px;
+    margin-right: 30px;
+}
+
+.actionable {
+    cursor: pointer;
+}
+
+div.roomThumbs {
+    position: absolute;
+    bottom: 5px;
+}
+
+#contentLoader.NARROW div.roomThumbs {
+    bottom: auto;
+    top: 472px;
+}
+
+#contentLoader.NARROW #roomText {
+    padding-top: 154px;
+}
+
+#capacity {
+    margin-right: 5px;
+}
+
+img.roomThumb {
+    background-color: blue;
+    width: 56px;
+    height: 56px;
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+div.header {
+    height: 105px;
+    width: calc(100vw - 10px);
+    margin-left: 5px;
+    color: white;
+    margin-top: 44px;
+    max-width: 1430px;
+}
+
+    div.header .title {
+        float: right;
+        width: 120px;
+        margin-top: 20px;
+        margin-right: 15px;
+    }
+
+     div.header .address {
+        float: left;        
+    }
+
+    img.logo {
+        width: 170px;
+        float: left;
+    }
+
+div.tile {
+    margin: 5px;
+    float: left;
+    color: white;
+    overflow: hidden;
+}
+
+    div.tile:hover {
+        box-shadow: 0 0 0 4px #7C7464;
+        transition: 0.1s transform, 1s height;
+        -webkit-transition: 0.1s -webkit-transform, 1s height;
+        xtransition-timing-function: cubic-bezier(.45, 1.39, 1, -0.87);
+    }
+
+    div.tile:active {
+        transform: scale(0.9);
+        transition: 0.1s transform;
+        xtransition-timing-function: cubic-bezier(.45, 1.39, 1, -0.87);
+        -webkit-transition: 0.1s -webkit-transform;
+    }
+
+    div.tile.noanim:active {
+        transform: none;
+    }
+
+    div.tile.small {
+        width: 150px;
+        height: 150px;
+        background-color: gray;
+    }
+
+    div.tile.middle {
+        width: 310px;
+        height: 150px;
+        background-color: blue;
+    }
+
+    div.tile.big {
+        width: 310px;
+        height: 310px;
+        background-color: yellow;
+    }
+
+    div.tile.biggest {
+        width: 310px;
+        height: 470px;
+    }  
+
+        div.tile.biggest .roomName {
+            margin-top: 432px;
+        }    
+
+    div.tile.facebook {
+        width: 310px;
+        height: auto;
+        background-color: lightgray;
+        min-height: 540px;
+    }
+
+    div.tile.order {
+        background-image: url('../img/pokoje.jpg');
+    }      
+
+    div.tile.preview {
+        background-image: url('../img/DSCF0115.jpg');
+        background-size: cover;
+        background-position: 150px auto;
+    }        
+
+    div.tile.poukaz {
+        background-image: url('../img/poukaz2.jpg');
+        background-repeat: no-repeat;
+        background-size: 310px 150px;
+        background-color: rgb(49,49,53);
+    }
+
+        div.tile.poukaz p {
+            opacity: 0;
+            padding: 5px;
+        }    
+
+        div.tile.poukaz.OPEN {
+            height: 400px;
+        }
+
+            div.tile.poukaz.OPEN  p {
+                opacity: 1;
+                transition: opacity 0.5s 0.7s;
+            }
+
+    div.tile.booking, div.tile.prices {
+        background-color: rgb(213,206,193);
+    }
+
+        div.tile.booking img {
+            margin-left: 14px;
+            width: 120px;
+            margin-top: 57px;
+        }
+
+    div.tile.prices {
+        background-image: url('../img/schodistew.jpg');
+    }
+
+        div.tile.prices THEAD {
+            font-weight: bold;
+            text-align: center;
+        }    
+
+        div.tile.prices TR:hover {
+            background-color: rgb(199,195,188);
+        }            
+
+    div.tile.contact {
+        background-image: url('../img/contact.png');
+
+    }  
+
+        div.tile.contact A {
+            color: rgb(32, 29, 29);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+     div.tile.besidkaText {
+        background-color: rgb(213,206,193);
+        color: #000;
+    } 
+
+        div.tile.besidkaText P {
+            margin: 10px;
+        }     
+
+    div.tile.small.opener {
+        background-repeat: no-repeat;
+        color: black;
+        transition: height 0.5s 0.5s, width 0.5s;
+    }
+
+        div.tile.middle.opener {
+            transition: height 0.5s;
+        }
+
+        div.tile.opener:active {
+            transform: none;
+        }
+
+        div.tile.opener.OPEN {
+            height:  570px;
+            width: 310px;
+        }
+
+            div.tile.opener.OPEN div.nadpis {
+                font-size: 0px;
+            }        
+
+                div.tile.opener.OPEN div.nadpis:before {
+                    content: "ZAVŘÍT";
+                    font-size: 16px;
+                }   
+
+            div.overview.opener.OPEN {
+                height:  1205px;
+            }
+
+            div.tile.opener.poukaz.OPEN {
+                height: 420px;
+            }     
+
+            div.tile.opener.prices.OPEN {
+                height: 620px;
+            }              
+
+            div.tile.opener.contact.OPEN {
+                height: 630px;
+            }                   
+
+            div.tile.opener.besidkaText.OPEN {
+                height: 420px;
+            }   
+
+            div.tile.opener .text {
+                opacity: 0;
+                transition: none;
+                padding: 10px;
+            }   
+
+            div.tile.opener.OPEN .text {
+                opacity: 1;
+                transition: opacity 0.5s 1s;
+            }
+.cnt {
+    width: 320px;
+    height: 220px;
+    float: left;
+    transition-property: width, height;
+    transition-duration: 1s;
+    background-color: white;
+    overflow: hidden;
+}
+
+    .cnt .wrp {
+        padding: 10px;
+        padding-left: 0px;
+        width: auto;
+        height: 100%;
+    }
+
+        .cnt .wrp .dta {
+            background-color: pink;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+        }
+
+    .cnt.LARGE {
+        width: 100%;
+        height: 600px;
+    }
+
+
+@media only screen and (min-width : 1260px) {
+    .cnt {
+        width: 25%;
+        height: 300px;
+    }
+
+        .cnt.LARGE {
+            width: 50%;
+            height: 600px;
+        }
+}
+
+@media only screen and (min-width : 960px) and (max-width : 1260px) {
+    .cnt {
+        width: 33.33333%;
+        height: 300px;
+    }
+
+        .cnt.LARGE {
+            width: 33.33333%;
+            height: 600px;
+        }
+}
+
+@media only screen and (min-width : 640px) and (max-width : 960px) {
+    .cnt {
+        width: 50%;
+        height: 300px;
+    }
+
+        .cnt.LARGE {
+            width: 50%;
+            height: 600px;
+        }
+}
+
+@media only screen and (max-width : 640px) {
+    .cnt {
+        width: 100%;
+        font-size: 40px;
+        height: 600px;
+    }
+
+        .cnt .wrp {
+            padding: 40px;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .cnt.LARGE {
+            width: 100%;
+            height: 1200px;
+        }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-device-width : 480px) {
+    body {
+        margin: 0px;
+    }
+
+    .cnt {
+        width: 100%;
+        font-size: 40px;
+        height: 600px;
+    }
+
+        .cnt .wrp {
+            padding: 40px;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .cnt.LARGE {
+            width: 100%;
+            height: 1200px;
+        }
+}
+
+div.tile.logo {
+    background: url('../img/besidkaBackground.png');
+}
+
+    div.tile.logo  a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    div.tile.logo  a:hover {
+        color: #7C7464;
+    }    
+
+    div.tile.logo img {
+        padding-top: 54px;
+        padding-left: 3px;
+        float: left;
+    }
+
+    div.tile.logo .nadpis {
+        text-align: left;
+        padding-left: 23px;
+    }    
+
+        div.tile.logo .nadpis span {
+            margin-left: 39px;
+        }      
+
+/* Smartphones (portrait) ----------- */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+    /* Styles */
+    .cnt {
+        background-color: red;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .cnt {
+        background-color: red;
+    }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    /* Styles */
+    .cnt {
+        background-color: green;
+    }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    /* Styles */
+    .cnt {
+        background-color: black;
+    }
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+    /* Styles */
+}
