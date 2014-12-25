@@ -287,53 +287,48 @@ div#contentLoader.FULLSCREEN div {
 }
 
 div#bd {
-    margin: auto;
     margin-top: 40px;
-    width: 1400px;
-}
-
-div.columns {
     width: 100%;
 }
 
+div.columns {
+    width: 1295px;
+    margin: auto;
+    transition: 0.5s width;
+}
+
 div.column {
-    width: 380px;
-    float: left;
+    width: 320px;
+    display: inline-block;
     transition-property: width;
     transition-duration: 0.5s;
+    vertical-align: top;
 }
 
-@media only screen and (max-width : 1300px) {
-    div.column {
-        width: 320px;
+.columnWrapper {
+    width: 49%;
+    display: inline-block;
+}
+
+@media only screen and (max-width : 1315px) {
+    div.columns {
+        width: 970px;
     }
 }
 
-@media only screen and (max-width : 1100px) {
-    div#bd {
-        width: 1100px;
-    }
-}                                                                                                                                   
-
-@media only screen and (max-width : 830px) {
-    div#bd {
-        width: 830px;
+@media only screen and (max-width : 1000px) {
+    div.columns {
+        width: 650px;
     }
 }
 
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width : 675px) {
     div#bd {
-        width: 100%;
         margin-top: 0px;
     }
-}
-
-div.column.last {
-    width: 320px;
-}
-
-div.column.second {
-    width: 320px;
+    div.columns {
+        width: 320px;
+    }
 }
 
 img.star {
@@ -590,114 +585,6 @@ div.tile {
                 opacity: 1;
                 transition: opacity 0.5s 1s;
             }
-.cnt {
-    width: 320px;
-    height: 220px;
-    float: left;
-    transition-property: width, height;
-    transition-duration: 1s;
-    background-color: white;
-    overflow: hidden;
-}
-
-    .cnt .wrp {
-        padding: 10px;
-        padding-left: 0px;
-        width: auto;
-        height: 100%;
-    }
-
-        .cnt .wrp .dta {
-            background-color: pink;
-            width: 100%;
-            height: 100%;
-            margin: auto;
-        }
-
-    .cnt.LARGE {
-        width: 100%;
-        height: 600px;
-    }
-
-
-@media only screen and (min-width : 1260px) {
-    .cnt {
-        width: 25%;
-        height: 300px;
-    }
-
-        .cnt.LARGE {
-            width: 50%;
-            height: 600px;
-        }
-}
-
-@media only screen and (min-width : 960px) and (max-width : 1260px) {
-    .cnt {
-        width: 33.33333%;
-        height: 300px;
-    }
-
-        .cnt.LARGE {
-            width: 33.33333%;
-            height: 600px;
-        }
-}
-
-@media only screen and (min-width : 640px) and (max-width : 960px) {
-    .cnt {
-        width: 50%;
-        height: 300px;
-    }
-
-        .cnt.LARGE {
-            width: 50%;
-            height: 600px;
-        }
-}
-
-@media only screen and (max-width : 640px) {
-    .cnt {
-        width: 100%;
-        font-size: 40px;
-        height: 600px;
-    }
-
-        .cnt .wrp {
-            padding: 40px;
-            padding-left: 0px;
-            padding-right: 0px;
-        }
-
-        .cnt.LARGE {
-            width: 100%;
-            height: 1200px;
-        }
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen and (max-device-width : 480px) {
-    body {
-        margin: 0px;
-    }
-
-    .cnt {
-        width: 100%;
-        font-size: 40px;
-        height: 600px;
-    }
-
-        .cnt .wrp {
-            padding: 40px;
-            padding-left: 0px;
-            padding-right: 0px;
-        }
-
-        .cnt.LARGE {
-            width: 100%;
-            height: 1200px;
-        }
-}
 
 div.tile.logo {
     background: url('../img/besidkaBackground.png');
@@ -721,44 +608,8 @@ div.tile.logo {
     div.tile.logo .nadpis {
         text-align: left;
         padding-left: 23px;
-    }    
+    }
 
         div.tile.logo .nadpis span {
             margin-left: 39px;
-        }      
-
-/* Smartphones (portrait) ----------- */
-@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
-    /* Styles */
-    .cnt {
-        background-color: red;
-    }
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    .cnt {
-        background-color: red;
-    }
-}
-
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-    /* Styles */
-    .cnt {
-        background-color: green;
-    }
-}
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-    /* Styles */
-    .cnt {
-        background-color: black;
-    }
-}
-
-/* iPhone 4 ----------- */
-@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
-    /* Styles */
-}
+        }
