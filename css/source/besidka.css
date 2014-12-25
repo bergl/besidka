@@ -1,8 +1,9 @@
 body {
     margin: 0px;
+    margin-top: 40px;
     margin-bottom: 40px;
-    background-color: rgb(54, 54, 54);
-    background: linear-gradient(rgb(15, 15, 15), rgb(54, 54, 54));
+    background-color: rgb(15,15,15);
+    transition: 0.5s margin;
 }
 
 .navBut {
@@ -286,11 +287,6 @@ div#contentLoader.FULLSCREEN div {
     transition-duration: 0.5s;
 }
 
-div#bd {
-    margin-top: 40px;
-    width: 100%;
-}
-
 div.columns {
     width: 1295px;
     margin: auto;
@@ -323,7 +319,7 @@ div.column {
 }
 
 @media only screen and (max-width : 675px) {
-    div#bd {
+    body {
         margin-top: 0px;
     }
     div.columns {
