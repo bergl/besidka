@@ -1,4 +1,4 @@
-/// <reference path="jquery-1.10.2.min.js" />
+/// <reference path="jquery-1.11.1.min.js" />
 
 var contentLoader,
     imgLoader,
@@ -211,6 +211,12 @@ function changeAllHash() {
 
     if(window.location.hash) {
         var hasParam = window.location.hash.substring(1);
+
+        if (hash === hasParam) {
+            //avoid cyclic triggering
+            return;
+        }
+
         if (isRoom(hasParam)) {
             room = hasParam.toUpperCase();
             if (g_current_room === rooms[room]) {
@@ -252,13 +258,14 @@ function showOrder() {
     var el = $( "div.tile.order"),
         orderContent = $("div.orderContent");
 
-    if (orderContent.is(':visible')) {
+    if (lastTile && orderContent.is(':visible')) {
         hideContentLoader();
         return false;
     }
 
     prepareOrder();
     contentLoader.show();
+    orderContent.show();
     orderContent.width(getContentWidth());
     
     if (!isFullScreen()) {
@@ -272,11 +279,9 @@ function showOrder() {
     var contentWidth = getContentWidth();
     var contentHeight = getOrderContentHeight();
 
-    window.location.hash = ORDER_HASH + ':' + (g_current_room ? g_current_room.name : 'bohac');
-
+    setHash(ORDER_HASH + ':' + (g_current_room ? g_current_room.name : 'bohac'));
     async(function () {
         showFullscreenContent(contentWidth, contentHeight, el);
-        orderContent.show();
     });
 }
 

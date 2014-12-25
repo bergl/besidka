@@ -1,7 +1,7 @@
 /*jshint multistr: true */
 var localisation = {
 	'cs' : {
-		'title_restaurace' : 'RESTAURACE',
+		'title_restaurace' : 'RESTAURACE',		
 		'rooms' : 'POKOJE',
 		'capacity' : 'Kapacita:',
 		'order_room' : 'OBJEDNAT POKOJ',
@@ -29,6 +29,17 @@ var localisation = {
 	    'ceplecha_desc' : "<a>PAN CEPLECHA</a><br/><br/>Pod renesančním stropem  Besídky a za sklem zurčící Kali Gandaki v kamenech Himaláje, nelze se netěšit do koupelny, kde člověk není nikdy sám.",
 	    'vrba_desc' : "<a>PAN VRBA</a><br/><br/>Pokoj bez bariér i motorkářem průjezdný, kde vrba z toskánského pobřeží liry plodící, dala základ celé Besídce bez potřeby bankéřův.",
 	    'haty_desc' : "<a>MR. HATY</a><br/><br/>Za posuvnými dveřmi v posteli pod mostem lze přemítat o iracionalitě a transcendentnosti světa a čísla nad vanou v koupelně, kde Ludolf zanechal svou geometrickou stopu, protože i Haty byl geometrem.",
+	    'selected_room': 'Vybraný pokoj:',
+	    'people_count': 'Počet osob (bez dětí):',
+	    'add_kids': 'Přidat děti',
+	    'kids3': 'Děti do 3 let (zdarma):',
+	    'kids312': 'Děti od 3 do 12 let (sleva 50%):',
+	    'nights': 'Počet nocí:',
+	    'date_arrive': 'Datum příjezdu:',
+	    'date_arrive_note': 'zobrazí obsazenost pokoje',
+	    'date_departure': 'Datum odjezdu:',
+	    'approx_price': 'Přibližná cena (beze slev):',
+	    'person_count' : 'Počet osob:',
 	},
 	'en' : {
 		'title_restaurace' : 'RESTAURANT',
@@ -55,6 +66,17 @@ var localisation = {
 	    'ceplecha_desc' : "<a>MR. CEPLECHA</a><br/><br/>Pod renesančním stropem  Besídky a za sklem zurčící Kali Gandaki v kamenech Himaláje, nelze se netěšit do koupelny, kde člověk není nikdy sám.<br/>",
 	    'vrba_desc' : "<a>MR. VRBA</a><br/><br/>Pokoj bez bariér i motorkářem průjezdný, kde vrba z toskánského pobřeží liry plodící, dala základ celé Besídce bez potřeby bankéřův.<br/>",
 	    'haty_desc' : "<a>MR. HATY</a><br/><br/>Za posuvnými dveřmi v posteli pod mostem lze přemítat o iracionalitě a transcendentnosti světa a čísla nad vanou v koupelně, kde Ludolf zanechal svou geometrickou stopu, protože i Haty byl geometrem.<br/>",		
+		'selected_room': 'Selected room:',
+	    'people_count': 'Number of people (adults):',
+	    'add_kids': 'Add kids',
+	    'kids3': 'Kids under 3 years (free):',
+	    'kids312': 'Kids between 3 and 12 years (50% discount):',
+	    'nights': 'Number of nights:',
+	    'date_arrive': 'Arrival date:',
+	    'date_arrive_note': 'will display room reservation overview',
+	    'date_departure': 'Departure date:',
+	    'approx_price': 'Approx. price (without discounts):',
+	    'person_count' : 'Person #:',
 	}	
 };
 

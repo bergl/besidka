@@ -83,6 +83,7 @@ var rooms = {
 
 var g_actual_pict = 0,
     g_for_explorer = "img/",
+    hash,
     g_current_room = null;
 
 
@@ -120,6 +121,11 @@ function getRoomFullName(room) {
     return rooms[room].full_name;
 }
 
+function setHash(newHash) {
+    window.location.hash = newHash;
+    hash = newHash;
+}
+
 function changeAll(room) {
     if (g_current_room === rooms[room]) {
         return;
@@ -132,8 +138,8 @@ function changeAll(room) {
 
     roomOrderLink.title = "Objednat pokoj " + g_current_room.full_name;
     roomOrderLink.href = "form.html#" + g_current_room.name;
-    
-    window.location.hash = g_current_room.name;
+
+    setHash(g_current_room.name);
     $$("roomDesc").innerHTML = currentLocalisation[g_current_room.name + '_desc'];
     $$("price").innerText = g_current_room.price;
     $$("price_seaon").innerText = g_current_room.price_season;
