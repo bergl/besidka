@@ -3,7 +3,17 @@ body {
     margin-top: 40px;
     margin-bottom: 40px;
     background-color: rgb(15,15,15);
+    background: linear-gradient(#0f0f0f,#363636);
     transition: 0.5s margin;
+}
+
+body.FULLSCREEN .columns {
+     -webkit-filter: blur(5px);
+     -moz-filter: blur(5px);
+     -o-filter: blur(5px);
+     -ms-filter: blur(5px);
+     filter: blur(5px);
+    transition: .5s width,.5s .5s -webkit-filter;
 }
 
 .navBut {
@@ -119,7 +129,6 @@ div#contentLoader {
     position: absolute;
     overflow: visible;
     box-shadow: 0 0 10px black, 0 0 0 999px transparent;
-    
 }
 
     div#contentLoader div.imgCont {
@@ -290,7 +299,7 @@ div#contentLoader.FULLSCREEN div {
 div.columns {
     width: 1295px;
     margin: auto;
-    transition: 0.5s width;
+    transition: none;
 }
 
 div.column {

@@ -1,7 +1,7 @@
 /// <reference path="jquery-1.11.1.min.js" />
 
 var contentLoader,
-    imgLoader,
+    imgLoader, bd,
     LARGE_SIZE = 2 * 320,
     SMALL_SIZE = 320,
     LARGE_SIZE_H = 491,
@@ -87,7 +87,8 @@ function resetContenLoaderSize () {
 
 function hideContentLoader() {
     contentLoader.addClass("HIDING");       
-    contentLoader.removeClass("FULLSCREEN");       
+    contentLoader.removeClass("FULLSCREEN");    
+    bd.removeClass("FULLSCREEN");
     setContentLoaderToTileSize(lastTile);
     setTimeout(function () {
         contentLoader.removeClass("HIDING");       
@@ -99,6 +100,7 @@ function hideContentLoader() {
 function showFullscreenContent(contentWidth, contentHeight, tile) {
     lastTile = tile;
     contentLoader.addClass("FULLSCREEN");
+    bd.addClass("FULLSCREEN");
     var center = getWindowCenter(contentWidth, contentHeight);
     contentLoader.offset(center);
     contentLoader.width(contentWidth);
@@ -414,6 +416,7 @@ $().ready(function () {
     var wind = $(window);
     contentLoader = $("#contentLoader");
     imgLoader = $("#imageLoader");
+    bd = $(document.body);
 
     $(".room").each(prepareRoom);
     loadLanguage();
