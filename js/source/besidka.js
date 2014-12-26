@@ -40,20 +40,24 @@ function getCookie(cname) { //clean
     return "";
 }
 
+function switchLanguage(language) {
+    currentLocalisation = localisation[language];
+    $.datepicker.setDefaults($.datepicker.regional[language]);
+    translateAll();
+}
+
 function setLanguage(language) {
     if (localisation[language]) {
         setCookie("lang", language, 30);
-        currentLocalisation = localisation[language];
-        translateAll();
+        switchLanguage(language);
     }
 }
 
 function loadLanguage() {
-    var lang = getCookie('lang');
+    var language = getCookie('lang');
 
-    if (lang && localisation[lang] && lang !== defaultLanguage) {
-        currentLocalisation = localisation[lang];
-        translateAll();        
+    if (language && localisation[language] && language !== defaultLanguage) {
+        switchLanguage(language);
     }
 }
 
@@ -63,7 +67,11 @@ function translateItem() {
         translated = currentLocalisation[string];
 
     if (translated) {
-        item.html(translated);
+        if (item.is('input')) {
+            item.val(translated);
+        } else {
+            item.html(translated);
+        }
     }
 }
 
@@ -274,7 +282,7 @@ function showOrder() {
     } else {
         setContentLoaderToTileSize(contentLoader);
     }
-    
+
     orderContent.show();
     resetOrder();
     

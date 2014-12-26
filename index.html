@@ -188,9 +188,9 @@
             <span class="label" data-res="nationality">Státní příslušnost:</span><input id="nat" type="text" value=""/>
         </div>  
         <div id="services" class="hidden tab">
-            <span class="label" data-res="extra_bed">Přistýlka:</span><input id="extra_bed" class="countable" type="text" value="0"/> 490 kč/den
-            <span class="label" data-res="dog">Pes:</span><input id="dog" class="countable" type="text" value="0"/> 200 kč/den
-            <span class="label" data-res="tin_bed">Děstská postýlka:</span><input id="tiny_bed" class="countable" type="text" value="0"/> Zdarma
+            <span class="label" data-res="extra_bed">Přistýlka:</span><input id="extra_bed" class="countable" type="text" value="0"/> 490 <span data-res="price_per_night">kč/den</span>
+            <span class="label" data-res="dog">Pes:</span><input id="dog" class="countable" type="text" value="0"/> 200 <span data-res="price_per_night">kč/den</span>
+            <span class="label" data-res="tiny_bed">Děstská postýlka:</span><input id="tiny_bed" class="countable" type="text" value="0"/> Zdarma
             <span class="label" data-res="voucher">Číslo voucheru:</span><input id="voucher" type="text" value=""/> Musí být číslo
             <span class="label" data-res="note">Poznámka:</span><textarea cols="20" rows="3" id="note"></textarea>          
         </div>       
@@ -208,7 +208,7 @@
                 </table>  
               </div>                  
               <div id="order_table2">
-                <span class="label mand">Detaily rezervace:</span>
+                <span class="label mand" data-res="reservation_details">Detaily rezervace:</span>
                 <table>
                   <tr><td data-res="room">Pokoj:</td><td id="fill_room"></td></tr>
                   <tr><td data-res="people_count" class="mand">Počet osob:</td><td id="fill_person"></td></tr>
@@ -224,10 +224,10 @@
               <span class="label mand" data-res="approx_price">Přibližná cena (beze slev):</span><span class="tmpPrice"></span>                             
         </div>
         <div id="tn_navigation">
-          <div id="tn_room_select"><input type="button" value="Zavřít" onClick='hideContentLoader();'><input type="button" value="2. Osobní Údaje >>" onClick='showOrderDetails();'></div>
-          <div id="tn_order_details" class="hidden"><input type="button" value="<< 1. Výběr pokoje" onClick='showRoomSelect();'><input type="button" value="3. Služby >>" onClick='showServices();'></div>
-          <div id="tn_services" class="hidden"><input type="button" value="<< 2. Osobni udaje" onClick='showOrderDetails();'><input type="button" value="4. Objednávka >>" onClick='showOrderOverview();'></div>    
-          <div id="tn_order" class="hidden"><input type="button" value="<< 3. Služby" onClick="showServices();"><input type="button" id="finalOrder" value="Objednat"></div>
+          <div id="tn_room_select"><input type="button" value="Zavřít" data-res="close" onClick='hideContentLoader();'><input type="button" value="2. Osobní Údaje >>" data-res="personal_data_next" onClick='showOrderDetails();'></div>
+          <div id="tn_order_details" class="hidden"><input type="button" data-res="room_select_prev" value="<< 1. Výběr pokoje" onClick='showRoomSelect();'><input type="button" value="3. Služby >>" data-res="services_next" onClick='showServices();'></div>
+          <div id="tn_services" class="hidden"><input type="button" data-res="personal_data_prev" value="<< 2. Osobni udaje" onClick='showOrderDetails();'><input type="button" value="4. Objednávka >>" data-res="order_next" onClick='showOrderOverview();'></div>
+          <div id="tn_order" class="hidden"><input type="button" data-res="services_prev" value="<< 3. Služby" onClick="showServices();"><input type="button" id="finalOrder" data-res="order" value="Objednat"></div>
         </div>                                
         <div id="overall" class="hidden">
         </div>  
