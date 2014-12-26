@@ -267,7 +267,6 @@ function showOrder() {
 
     prepareOrder();
     contentLoader.show();
-    orderContent.show();
     orderContent.width(getContentWidth());
     
     if (!isFullScreen()) {
@@ -275,7 +274,8 @@ function showOrder() {
     } else {
         setContentLoaderToTileSize(contentLoader);
     }
-
+    
+    orderContent.show();
     resetOrder();
     
     var contentWidth = getContentWidth();
