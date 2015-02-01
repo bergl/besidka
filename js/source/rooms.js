@@ -127,6 +127,10 @@ function setHash(newHash) {
 }
 
 function updateData() {
+    if (!g_current_room) {
+        return;
+    }
+    
     var roomOrderLink = $$("roomOrderLink");
 
     roomOrderLink.title = "Objednat pokoj " + g_current_room.full_name;
