@@ -6,6 +6,11 @@ body {
     transition: 0.5s margin;
 }
 
+.redLink {
+    font-weight: bold;
+    color: #8B0000;
+    text-decoration: none;}
+
 .navBut {
     width: 41px;
     height: 41px;
@@ -521,7 +526,11 @@ div.tile {
 
         div.tile.besidkaText P {
             margin: 10px;
-        }     
+        }
+        
+    div.tile.reconstruction .tileText {
+        float: left;
+    }
 
     div.tile.small.opener {
         background-repeat: no-repeat;
@@ -569,7 +578,11 @@ div.tile {
 
             div.tile.opener.besidkaText.OPEN {
                 height: 470px;
-            }   
+            }
+
+            div.tile.opener.besidkaText.reconstruction.OPEN {
+                height: 670px;
+            }
 
             div.tile.opener .text {
                 opacity: 0;
