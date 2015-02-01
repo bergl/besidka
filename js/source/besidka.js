@@ -44,6 +44,7 @@ function switchLanguage(language) {
     currentLocalisation = localisation[language];
     $.datepicker.setDefaults($.datepicker.regional[language]);
     translateAll();
+    updateData();
 }
 
 function setLanguage(language) {

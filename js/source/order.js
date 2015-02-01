@@ -74,10 +74,12 @@ function updateBeds() {
 	    return;
   }
 
-  var room = g_current_room;
+  var room = g_current_room,
+	  of = currentLocalisation.of || 'z';
+
   
-  $("#max_persons").text(npeople + " z max " + room.ncapacity);
-  $("#add_bed").text(Math.max(0, npeople - room.beds) + " z max " + (room.ncapacity - room.beds));  
+  $("#max_persons").text(npeople + " " + of + " max " + room.ncapacity);
+  $("#add_bed").text(Math.max(0, npeople - room.beds) + " " + of + " max " + (room.ncapacity - room.beds));
 }
 
 function changeDate()  {

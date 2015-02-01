@@ -1,6 +1,9 @@
 /*jshint multistr: true */
 var localisation = {
 	'cs' : {
+		'of' : 'z',
+		'persons' : 'osob',
+		'extrabed' : 'přistýlek',
 		'title_restaurace' : 'RESTAURACE',		
 		'rooms' : 'POKOJE',
 		'capacity' : 'Kapacita:',
@@ -66,6 +69,9 @@ var localisation = {
 		'order' : 'Objednat'
 	},
 	'en' : {
+		'of' : 'of',
+		'persons' : 'persons',
+		'extrabed' : 'extra beds',
 		'title_restaurace' : 'RESTAURANT',
 		'rooms' : 'ROOMS',	
 		'capacity' : 'Capacity:',
@@ -86,10 +92,10 @@ var localisation = {
 	    'vavra_desc' :  "<a>MR. VÁVRA</a><br/><br/>A double room with up to four extra beds in two comfortable unfolding sofas. A Noah’s Ark upside down, with a unique view of the square. One of the largest rooms in the house, facing south-south-west, catching the long evening sunrays. David Vávra painted the bathroom himself.",
 	    'zampic_desc' : "<a>MR. ŽAMPA</a><br/><br/>The oak and gray of old Mexico, with a tired peon and his mule in the bathroom. Cozy slanted walls under the oldest rafters. A place where sleeping through the day is an experience, not a waste.",
 	    'renesance_desc' : "<a>THE RENAISSANCE HALL</a><br/><br/>A Rococo-Renaissance hall with a view of the square. Its almost 1000 square feet invite you to dance, receptions, workshops or yoga classes. Rococo stucco decorations, a tile stove and whatever is just happening on the square.",
-	    'koucky_desc' : "<a>MR. KOUCKÝ</a><br/><br/>Jeden pokoj, dvě schodiště, tři výškové úrovně, čtyři postele a v koupelně Fibonacci v nekonečné spirále, konkuruje základnímu trojúhelníku na místě  stráženém tím geniem z ostrova Samos.<br/>",
-	    'ceplecha_desc' : "<a>MR. CEPLECHA</a><br/><br/>Pod renesančním stropem  Besídky a za sklem zurčící Kali Gandaki v kamenech Himaláje, nelze se netěšit do koupelny, kde člověk není nikdy sám.<br/>",
-	    'vrba_desc' : "<a>MR. VRBA</a><br/><br/>Pokoj bez bariér i motorkářem průjezdný, kde vrba z toskánského pobřeží liry plodící, dala základ celé Besídce bez potřeby bankéřův.<br/>",
-	    'haty_desc' : "<a>MR. HATY</a><br/><br/>Za posuvnými dveřmi v posteli pod mostem lze přemítat o iracionalitě a transcendentnosti světa a čísla nad vanou v koupelně, kde Ludolf zanechal svou geometrickou stopu, protože i Haty byl geometrem.<br/>",		
+	    'koucky_desc' : "<a>MR. KOUCKÝ</a><br/><br/>One room, two sets of stairs, three levels, four beds and an infinite Fibonacci spiral in the bathroom, competing with a triangle guarded by the genius from the island of Samos.<br/>",
+	    'ceplecha_desc' : "<a>MR. CEPLECHA</a><br/><br/>Under Besídka‘s Reinessaince ceiling, in the shadow of the mighty Kali Gandaki cascading over Himalayan pebbles, it is impossible not to cherish the bathroom where one is never alone.<br/>",
+	    'vrba_desc' : "<a>MR. VRBA</a><br/><br/>A room without barriers, accessible to even an enthusiastic motorcyclist, where a willow from the Tuscan coast gave rise to Besidka, with no need of a banker’s hand.<br/>",
+	    'haty_desc' : "<a>MR. HATY</a><br/><br/>In a bed behind the partition you can contemplate the irrationality and transcendence of the world and numbers, since Ludolf left a geometric footprint in the bathroom and Haty was a geometer too.<br/>",
 		'selected_room': 'Selected room:',
 	    'people_count': 'Number of people (adults):',
 	    'add_kids': 'Add kids',

@@ -126,15 +126,8 @@ function setHash(newHash) {
     hash = newHash;
 }
 
-function changeAll(room) {
-    if (g_current_room === rooms[room]) {
-        return;
-    }
-
+function updateData() {
     var roomOrderLink = $$("roomOrderLink");
-    
-    if (!setCurrentRoom(room))
-        return;
 
     roomOrderLink.title = "Objednat pokoj " + g_current_room.full_name;
     roomOrderLink.href = "form.html#" + g_current_room.name;
@@ -147,4 +140,12 @@ function changeAll(room) {
     $$("acreage").innerText = g_current_room.acreage;
     setRoomImage(0);
     addThumbnails();
+}
+
+function changeAll(room) {
+    if (g_current_room === rooms[room] || !setCurrentRoom(room)) {
+        return;
+    }
+
+    updateData();
 }
