@@ -83,6 +83,10 @@ var localisation = {
 		'price' : 'Price:',
 		'price_season' : 'Price season:',
 		'gift_certificate' : 'GIFT CERTIFICATE',
+		'besidka_text' : '\
+			<p>“Besidka” is a meeting place, restaurant, gallery and a design hotel, now spanning a recently opened hostel “The Blue Star” in the neighbouring house as well as a ceramics and textiles workshop where you can design and print your own t-shirt and even paint a cup.</p>\
+			<p>The house in which “Besidka” is located, was bought on the 27th of June 1988 by seven brave men from the Sklep theatre and the Wife of the Nations, back then the totalitarian regime was still so deep that they didn’t see further than the tip of their noses and couldn’t get any further than the closet. </p>\
+			<p>A quote from the time when “Besidka” existed only in a literary-theatre form before it metarialised into a form when the restaurant and bar became the head, the kitchen became the belly and the cellar serves as liver-kidney with a heart in the Renaissance hall which is not at all Renaissance-like.</p>',
 		'bohac_desc' :  "<a>MR. BOHÁČ</a><br/><br/>The largest suite among the Gothic walls of the oldest part of the house Double room, option of four extra beds. Watch the fire sprite’s fury in the original tile stove reflect on the Baroque ceiling. The original black kitchen was turned into a black bathroom. Watch the stars from your white bathtub.",
 		'gena_desc' : "<a>THE WIFE OF THE NATIONS</a><br/><br/>A Renaissance pearl in the south window, just for you. The courtiers who usually dwell in the bathroom have just left the ochre labyrinth of their kingdom; however, the Middle Ages are alive and well behind the yellow Baroque door, the oldest one on Besídka.",
     	'hanak_desc' : "<a>MR. HANÁK</a><br/><br/>On the catafalque in front of the raspberry altar under the Renaissance vaulting, you wonder whether this is Heaven,Hell or Tomáš Hanák’s room. The bathroom may give you a clue, but you will only be certain when your time comes.",
