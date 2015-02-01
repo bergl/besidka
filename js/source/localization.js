@@ -1,6 +1,9 @@
 /*jshint multistr: true */
 var localisation = {
 	'cs' : {
+		'hotel_of_the_year_text' : 'Besídka vyhrála cenu HOTEL ROKU 2013 pro Jihočeský kraj. ',
+		'eu_text': 'Tento projekt Rekonstrukce historického objektu s cílem rozšíření ubytovacích kapacit hotelu Besídka je spolufinancován Evropskou unií.',
+		'more_informations' : 'Více informací ...',
 		'of' : 'z',
 		'persons' : 'osob',
 		'extrabed' : 'přistýlek',
@@ -69,6 +72,9 @@ var localisation = {
 		'order' : 'Objednat'
 	},
 	'en' : {
+		'hotel_of_the_year_text' : '“Besidka” won the award Hotel of the Year of 2013 in South Bohemia.',
+		'more_informations' : 'More info. ...',
+		'eu_text': 'This project of renovation of a historical object with the goal of extending the accommodation capacity of Besidka is co-financed by the European Union.',
 		'of' : 'of',
 		'persons' : 'persons',
 		'extrabed' : 'extra beds',
