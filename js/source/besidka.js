@@ -263,6 +263,11 @@ function resetOrder() {
     $("#room").val(g_current_room ? g_current_room.name.toUpperCase() : 'BOHAC');
 }
 
+function hotelOfTheYear() {
+    window.open('img/hotelroku.png', '_blank', 'width=800,height=600,resizable=yes');
+    return false;
+}
+
 function showOrder() {
     var el = $( "div.tile.order"),
         orderContent = $("div.orderContent");
