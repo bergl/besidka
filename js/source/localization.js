@@ -63,12 +63,12 @@ var localisation = {
 		'reservation_details' : 'Detaily rezervace:',
 		'personal_data' : 'Osobní údaje:',
 		'ordered_services' : 'Objednané služby:',
-		'personal_data_next' : '2. Osobní Údaje >>',
-		'room_select_prev' : '<< 1. Výběr pokoje',
-		'personal_data_prev' : '<< 2. Osobni udaje',
-		'services_prev' : '<< 3. Služby',
-		'services_next' : '3. Služby >>',
-		'order_next' : '4. Objednávka >>',
+		'personal_data_next' : '2. Osobní Údaje &#187;',
+		'room_select_prev' : '&#171; 1. Výběr pokoje',
+		'personal_data_prev' : '&#171; 2. Osobni udaje',
+		'services_prev' : '&#171; 3. Služby',
+		'services_next' : '3. Služby &#187;',
+		'order_next' : '4. Objednávka &#187;',
 		'order' : 'Objednat'
 	},
 	'en' : {
@@ -134,12 +134,12 @@ var localisation = {
 		'reservation_details' : 'Reservation details:',
 		'personal_data' : 'Personal info:',
 		'ordered_services' : 'Ordered room services:',
-		'personal_data_next' : '2. Personal data >>',
-		'room_select_prev' : '<< 1. Room select',
-		'personal_data_prev' : '<< 2. Personal data',
-		'services_prev' : '<< 3. Services',
-		'services_next' : '3. Services >>',
-		'order_next' : '4. Order >>',
+		'personal_data_next' : '2. Personal data &#187;',
+		'room_select_prev' : '&#171; 1. Room select',
+		'personal_data_prev' : '&#171; 2. Personal data',
+		'services_prev' : '&#171; 3. Services',
+		'services_next' : '3. Services &#187;',
+		'order_next' : '4. Order &#187;',
 		'order' : 'Order'
 	}
 };
