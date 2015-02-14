@@ -5,7 +5,7 @@ var KORYS_ID     = 4;
 var KOUTAK_ID    = 5;
 var KUSIAK_ID    = 6;
 var VAVRA_ID     = 7;
-var ZAMPA_ID     = 8;
+var ZAMPIC_ID     = 8;
 var RENESANCE_ID = 9;
 var HOSTEL_ID = 13;
 var KOUCKY_ID = 18;
@@ -72,7 +72,7 @@ var rooms = {
     "KOUTAK": new Room("koutak", "Koutak", "Kouťák",  "2 + 2",4, 5, SECOND_FLOOR, 1490, 1290, 1290, 990, true, 29, KOUTAK_ID, 2, true, false),
     "KUSIAK": new Room("kusiak", "Kusiak", "Kušiak",  "2 + 4",6, 3, SECOND_FLOOR, 1490, 1290, 1290, 990, true, 28, KUSIAK_ID, 2, true, false),
     "VAVRA": new Room("vavra", "Vavra", "Vávra",  "2 + 4",6, 8, SECOND_FLOOR, 1490, 1490, 1290, 1290, true, 51, VAVRA_ID, 2, true, false),
-    "ZAMPIC": new Room("zampic", "Zampic", "Žampa",  "2 + 4",6, 3, SECOND_FLOOR, 1490, 1290, 1290, 990, true, 33, ZAMPA_ID, 2, true, false),
+    "ZAMPIC": new Room("zampic", "Zampic", "Žampa",  "2 + 4",6, 3, SECOND_FLOOR, 1490, 1290, 1290, 990, true, 33, ZAMPIC_ID, 2, true, false),
     "RENESANCE": new Room("renesance", "Renesance", "Renesance","100 m2", 0, 7, BOTTOM_FLOOR, '?', '?','?', '?', true, 100, RENESANCE_ID, "moc", false, false),
     "HOSTEL" : new Room("hostel", "hostel","Hostel", "moc", 0, 0, HOSTEL, 150, 150,150, 150, false, HOSTEL_ID, "moc", false, false),
     "KOUCKY": new Room("koucky", "Koucky", "Koucký",  "2 + 4",6, 7, BACK_HOUSE, 1490, 1490, 1290, 1290, false, 42, KOUCKY_ID, 2, KOUCKY_ID, 2, true, true),
