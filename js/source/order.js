@@ -284,7 +284,7 @@ function enableControl(item, enable, withControls) {
 function selectRoom(room) {
 	changeAll(room);
 
-	var today = new Date();
+	var today = new Date(),
 		isRenesance = g_current_room.id === RENESANCE_ID;
 
 	loadMonth(today.getFullYear(), (today.getMonth() + 1), false);
