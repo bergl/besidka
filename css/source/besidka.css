@@ -107,16 +107,16 @@ body {
     height: 0px;
 }
 
-#roomOrderLink {
+.roomLink {
     display: block;
     margin-bottom: 10px;
     text-decoration: none;
     color: #603a83;
 }
 
-    #roomOrderLink:hover {
-       
-    }
+.tile.preview .nadpis {
+    margin-top: 432px;
+}
 
 div#contentLoader {
     background-color: white;
@@ -406,13 +406,11 @@ div.tile {
         box-shadow: 0 0 0 4px #7C7464;
         transition: 0.1s transform, 1s height;
         -webkit-transition: 0.1s -webkit-transform, 1s height;
-        xtransition-timing-function: cubic-bezier(.45, 1.39, 1, -0.87);
     }
 
     div.tile:active {
         transform: scale(0.9);
         transition: 0.1s transform;
-        xtransition-timing-function: cubic-bezier(.45, 1.39, 1, -0.87);
         -webkit-transition: 0.1s -webkit-transform;
     }
 
@@ -460,9 +458,14 @@ div.tile {
 
     div.tile.preview {
         background-image: url('../img/DSCF0115.jpg');
-        background-size: cover;
-        background-position: 150px auto;
-    }        
+        background-repeat: no-repeat;
+        background-color: #313135;
+    }
+        #overall INPUT {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+        }
 
     div.tile.poukaz {
         background-image: url('../img/poukaz2.jpg');
@@ -474,7 +477,7 @@ div.tile {
         div.tile.poukaz p {
             opacity: 0;
             padding: 5px;
-        }    
+        }
 
         div.tile.poukaz.OPEN {
             height: 400px;
@@ -482,7 +485,7 @@ div.tile {
 
             div.tile.poukaz.OPEN  p {
                 opacity: 1;
-                transition: opacity 0.5s 0.7s;
+                transition: opacity 0.2s 0.7s;
             }
 
     div.tile.booking, div.tile.prices {
@@ -594,6 +597,58 @@ div.tile {
                 opacity: 1;
                 transition: opacity 0.5s 1s;
             }
+
+div.tile.opener.preview.OPEN {
+    height: 2340px;
+}
+
+    div.tile.preview .content {
+        padding: 15px;
+        opacity: 0;
+    }
+
+    div.tile.preview.OPEN .content {
+        opacity: 1;
+        transition: opacity 0.2s 1s;
+    }
+
+#overall {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+#overall .monthName {
+    display: inline-block;
+    text-align: center;
+    width: calc(100% - 70px);
+}
+
+    #overall .first {
+        margin-left: 125px;
+    }
+
+    #overall .room {
+        margin-top: 5px;
+        margin-left: 20px;
+        position: relative;
+        width: 299px;
+        display: inline-block;
+    }
+
+        #overall .room .name {
+            position: absolute;
+            top: 4px;
+            left: 5px;
+            color: #B5B4B6;
+        }
+
+        #overall .item {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            padding: 5px;
+        }
 
 div.tile.logo {
     background: url('../img/besidkaBackground.png');

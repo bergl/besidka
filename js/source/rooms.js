@@ -81,6 +81,13 @@ var rooms = {
     "HATY": new Room("haty", "Haty", "Haty",  "2 + 4",6, 2, BACK_HOUSE, 1490, 1490, 1290, 1290, false, 27, HATY_ID, 2, true, true)
 };
 
+var roomsArray = [];
+for (var prop in rooms) {
+    if( rooms.hasOwnProperty( prop ) ) {
+        roomsArray.push(rooms[prop]);
+    }
+}
+
 var g_actual_pict = 0,
     g_for_explorer = "img/",
     hash,
@@ -126,7 +133,7 @@ function setHash(newHash) {
     hash = newHash;
 }
 
-function updateData() {
+function updateData(date) {
     if (!g_current_room) {
         return;
     }
@@ -145,6 +152,10 @@ function updateData() {
     setRoomImage(0);
     addThumbnails();
 
+    if (date) {
+        $$("date_arrive").value = date;
+    }
+
     if (g_current_room.id === RENESANCE_ID) {
         $("#prices").hide();
     } else {
@@ -152,10 +163,10 @@ function updateData() {
     }
 }
 
-function changeAll(room) {
-    if (g_current_room === rooms[room] || !setCurrentRoom(room)) {
+function changeAll(room, date) {
+    if ((g_current_room === rooms[room] || !setCurrentRoom(room)) && !date) {
         return;
     }
 
-    updateData();
+    updateData(date);
 }

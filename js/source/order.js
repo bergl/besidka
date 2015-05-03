@@ -1,4 +1,6 @@
- var orderLoaded;
+ var orderLoaded,
+    serverAddress = 'http://54.247.99.58/order/',
+    current_month = new Date();
 
 //sezóna
 //(1.6 - 30.9,
@@ -146,7 +148,7 @@ function addIncreaseDescrease() {
 function showOrderStep(step, elements) {
 	if (cleanAllAndValidate(step, true)) {
 		elements.show();
-	}	
+	}
 }
 
 function copyValueFrom(to, from) {
@@ -197,7 +199,7 @@ function showOrderDetails() {
 
 function showRoomSelect() {
 	showOrderStep(1, $("#room_select,#tn_room_select"));
-}   
+}
 
 function showServices() {
 	showOrderStep(3, $("#services,#tn_services"));
@@ -207,6 +209,70 @@ function showOrderOverview() {
 	showOrderStep(4, $("#order,#tn_order"));
 	fillOrderDetails();
 }
+
+ function showFreeRoom(room, date) {
+     changeAll(room.toUpperCase(), date);
+     showOrder();
+ }
+
+ function getMonthControls(monthName) {
+     return "<input class='prevMonth' type='button' value='&#171;'/><div class='monthName'>" + monthName + "</div><input class='nextMonth' type='button' value='&#187;'/>";
+ }
+
+ function overallRooms(move) {
+     move = move || 0;
+     current_month.setMonth(current_month.getMonth() + move);
+
+     var room, i, tr, url = serverAddress + "rooms?month="+(current_month.getMonth() + 1)+"&year="+current_month.getFullYear(),
+         monthName = $.datepicker.regional.cs.monthNames[current_month.getMonth()],
+         contentCache = $("<div></div>"),
+         content = $("#overall"),
+         free, d, m, day, days, curr, date, past;
+
+     contentCache.html(getMonthControls(monthName));
+
+     $.getJSON(url +"&callback=?",  function(data) {}).done(function() {}).fail(function(jqxhr, textStatus, error) {var err = textStatus + ', ' + error;
+         console.log("Request Failed: " + err);}).always(function(data) {
+         curr = data[0];
+
+         for (i = 0; i < roomsArray.length; i++) {
+             room = $("<div class='room'></div>");
+             room.append("<span class='name'>" + roomsArray[i].full_name + "</span>");
+             days = curr[i];
+             for (d = 0; d < days.length; d++) {
+                 free = days[d] != "0";
+                 m = current_month.getMonth()+1;
+                 day = d+1;
+                 if (m < 10) m = "0"+m;
+                 if (day < 10) day = "0"+day;
+                 date = m + "." + day + "." + current_month.getFullYear();
+                 past = +new Date(date) < +new Date();
+
+                 if (past) {
+                     room.append($("<div class='item past"+ (d===0 ? ' first' : '')+"'>" + (d+1) +"</div>"));
+                 } else if (free) {
+                     room.append($("<div onclick='showFreeRoom(\"" + roomsArray[i].name + "\",\"" + day + "." + m + "." + current_month.getFullYear() + "\");' class='item free"+ (d===0 ? ' first' : '')+"'>" + (d + 1) + "</div>"));
+                 } else {
+                     room.append($("<div class='item occup"+ (d===0 ? ' first' : '')+"'>" + (d+1) +"</div>"));
+                 }
+             }
+             contentCache.append(room);
+         }
+         content.html(contentCache.html());
+         async(addMonthClickHandlers);
+     });
+ }
+
+ function addMonthClickHandlers() {
+     $(".prevMonth").click(function(event) {
+         overallRooms(-1);
+         event.stopPropagation();
+     });
+     $(".nextMonth").click(function(event) {
+         overallRooms(1);
+         event.stopPropagation();
+     });
+ }
 
 function orderRoom() {
    //do some precheck
@@ -248,7 +314,7 @@ function orderRoom() {
    var dpristylka = $("#tiny_bed").val();
    var voucher = $("#voucher").val();
    
-   var url = "http://54.247.99.58/order/saveForm?name="+name+"&fname="+fname+"&email="+email+"&room="+
+   var url = serverAddress + "saveForm?name="+name+"&fname="+fname+"&email="+email+"&room="+
               room+"&tel="+tel+"&city="+city+"&street="+street+"&psc="+psc+
               "&npeople="+npeople+"&ndays="+ndays+"&day="+day+"&month="+month+
               "&year="+year+"&text="+text+"&pocet_deti3="+pocet_deti3+"&pocet_deti312="+pocet_deti312+"&state="+state+

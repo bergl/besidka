@@ -2,12 +2,20 @@
 
 var contentLoader,
     imgLoader,
+    overallRoomsLoaded,
     LARGE_SIZE = 2 * 320,
     SMALL_SIZE = 320,
     LARGE_SIZE_H = 491,
     SMALL_SIZE_H = 457,
     SMALL_ORDER_SIZE_H = 370,
+    OVERALL_LARGE_SIZE = 960,
+    OVERALL_LARGE_SIZE_H = 680,
+    OVERALL_MIDDLE_SIZE = 640,
+    OVERALL_MIDDLE_SIZE_H = 915,
+    OVERALL_SMALL_SIZE = 320,
+    OVERALL_SMALL_SIZE_H = 1800,
     ORDER_HASH = 'order',
+    OVERALL_HASH = 'overall',
     lastTile;
 
 $("div.cnt").click(function () {
@@ -156,12 +164,27 @@ function getOrderContentHeight() {
     return $(window).width() < LARGE_SIZE ? LARGE_SIZE_H : SMALL_ORDER_SIZE_H;
 }
 
-function toggle (el) {
-    var element = $(el);
+function getOverAllContentWidth() {
+    var w = $(window).width();
+    return w >= OVERALL_LARGE_SIZE ? OVERALL_LARGE_SIZE : w >= OVERALL_MIDDLE_SIZE ?  OVERALL_MIDDLE_SIZE : OVERALL_SMALL_SIZE;
+}
 
+function getOverAllContentHeight() {
+    var w = $(window).width();
+    return w >= OVERALL_LARGE_SIZE ? OVERALL_LARGE_SIZE_H : w >= OVERALL_MIDDLE_SIZE ?  OVERALL_MIDDLE_SIZE_H : OVERALL_SMALL_SIZE_H;
+}
+
+function onOpenerToggled(element) {
+    if (element.hasClass('contact')) {
+        setTimeout(initializegMap, 500);
+    }
+}
+
+function toggle (element) {
     element.toggleClass('OPEN');
-    if (element.hasClass('contact') && element.hasClass('OPEN')) {
-        setTimeout(initializegMap, 500);    
+
+    if (element.hasClass('OPEN')) {
+        onOpenerToggled(element);
     }
 }
 
@@ -178,29 +201,8 @@ function setContentLoaderToTileSize (tile) {
 
 function handleWindowResize () {
     if (isFullScreen()) {
-        showFullscreenContent(getContentWidth(), getContentHeight(), lastTile);
+        showFullscreenContent(getContentWidth(), getContentHeight(), lastTile); //toddo fix
     }
-}
-
-function showRoom(el) {
-    var roomContent = $("div.roomContent"),
-        contentWidth,
-        contentHeight;
-
-    $("div.orderContent").hide();
-    fillRoomcontent(el.attr("data-room"));
-
-    roomContent.width(getContentWidth());
-    contentLoader.show();
-    roomContent.show();
-    contentWidth = getContentWidth();
-    contentHeight = roomContent.height();
-
-    setContentLoaderToTileSize(el);   
-
-    async(function () {
-        showFullscreenContent(contentWidth, contentHeight, el);
-    });
 }
 
 function isRoom(hash) {
@@ -209,6 +211,10 @@ function isRoom(hash) {
 
 function isOrder(hash) {
     return hash.indexOf(ORDER_HASH) === 0;
+}
+
+function isOverall(hash) {
+    return hash.indexOf(OVERALL_HASH) === 0;
 }
 
 function isFullScreen() {
@@ -236,11 +242,13 @@ function changeAllHash() {
             room = hasParam.substring(hasParam.indexOf(':') + 1).toUpperCase();
             changeAll(room);
             showOrder();
+        } else if (isOverall(hasParam)) {
+            showOverall();
         }
     } else {
-        if (isFullScreen()) {
-            hideContentLoader();
-        }    
+        //if (isFullScreen()) {
+        //    hideContentLoader();
+        //}
     }     
 }
 
@@ -268,8 +276,71 @@ function hotelOfTheYear() {
     return false;
 }
 
+function prepareOverall() {
+    if (!overallRoomsLoaded) {
+        overallRoomsLoaded = true;
+        setTimeout(overallRooms, 0);
+    }
+}
+
+function showOverall() {
+    var overall = $("#overall"),
+        el = $( "div.tile.preview");
+
+    if (lastTile && overall.is(':visible')) {
+        hideContentLoader();
+        return false;
+    }
+
+    prepareOverall();
+    $("div.orderContent").hide();
+    contentLoader.show();
+    overall.width(getOverAllContentWidth());
+    overall.height(getOverAllContentWidth());
+
+    if (!isFullScreen()) {
+        setContentLoaderToTileSize(el);
+    } else {
+        setContentLoaderToTileSize(contentLoader);
+    }
+
+    overall.show();
+    $("div.roomContent").hide();
+
+    var contentWidth = getOverAllContentWidth();
+    var contentHeight = getOverAllContentHeight();
+
+    async(function () {
+        showFullscreenContent(contentWidth, contentHeight, el);
+        setHash(OVERALL_HASH);
+    });
+}
+
+function showRoom(el) {
+    var roomContent = $("div.roomContent"),
+        contentWidth,
+        contentHeight;
+
+    $("div.orderContent").hide();
+    $("#overall").hide();
+    fillRoomcontent(el.attr("data-room"));
+
+    roomContent.width(getContentWidth());
+    contentLoader.show();
+    roomContent.show();
+    contentWidth = getContentWidth();
+    contentHeight = roomContent.height();
+
+    setContentLoaderToTileSize(el);
+
+    setHash(g_current_room.name);
+    async(function () {
+        showFullscreenContent(contentWidth, contentHeight, el);
+    });
+}
+
 function showOrder() {
-    var el = $( "div.tile.order"),
+    var el = $("div.tile.order"),
         orderContent = $("div.orderContent");
 
     if (lastTile && orderContent.is(':visible')) {
@@ -277,6 +348,7 @@ function showOrder() {
         return false;
     }
 
+    $("#overall").hide();
     prepareOrder();
     contentLoader.show();
     orderContent.width(getContentWidth());
@@ -297,6 +369,14 @@ function showOrder() {
     async(function () {
         showFullscreenContent(contentWidth, contentHeight, el);
     });
+}
+
+function handleOverallClick(event) {
+    showOverall();
+    if(event) {
+        event.stopPropagation();
+    }
+    return false;
 }
 
 function handleOrderClick(event) {
@@ -436,10 +516,11 @@ $().ready(function () {
     async(function () {
 
         $(".order, #roomOrderLink").click(handleOrderClick);
+        $(".preview, #overallLink").click(handleOverallClick);
 
         $(".opener").click(function(event) {
             if (!$(event.target).parents('.content').length) {
-                toggle(this);
+                toggle($(this));
             }
         }); 
 

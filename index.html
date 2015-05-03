@@ -18,7 +18,7 @@
                 <div class="tile small overview noanim opener">
                     <img src="img/star2.png"/>
                     <div class="nadpis ACTIVE" data-res="rooms">POKOJE</div>
-                    <div class="content"> <!-- generate -->
+                    <div class="content">
                         <div class="tile small room" data-room="ZAMPIC"></div>
                         <div class="tile small room" data-room="HANAK"></div>
                         <div class="tile small room" data-room="KORYS"></div>
@@ -38,7 +38,9 @@
                 <div class="tile small order actionable">
                     <div class="roomName ACTIVE" data-res="order_room">OBJEDNAT POKOJ</div>
                 </div>
-                <div class="tile biggest noanim preview"></div>
+                <div class="tile biggest preview actionable">
+                    <div class="nadpis ACTIVE" data-res="overall_link">CELKOVÝ PŘEHLED REZERVACÍ</div>
+                </div>
                  <div class="tile small contact opener">
                     <div class='nadpis' data-res="contact">KONTAKT</div>
                     <div class="content">
@@ -155,11 +157,13 @@
                         <span data-res="price_season" class="roomInfo">Cena sezóně:</span> <span id="price_seaon">1490</span>,- <span data-res="price_per_night">Kč/noc</span> <br />
                     </did>
                 </p>
-                <a href="#" id="roomOrderLink" data-res="order_room">OBJEDNAT POKOJ</a>
+                <a href="#" class="roomLink" id="roomOrderLink" data-res="order_room">OBJEDNAT POKOJ</a>
+                <a href="#" class="roomLink" id="overallLink" data-res="overall_link">CELKOVÝ PŘEHLED REZERVACÍ</a>
                 <div class="roomThumbs"></div>    
             </div>
             <div id="clearer"></div>
         </div>
+        <div id="overall"></div>
         <div class="orderContent">
         <div id="room_select" class="tab">
               <span class="label mand" data-res="selected_room">Vybraný pokoj:</span>
@@ -242,9 +246,6 @@
           <div id="tn_services" class="hidden"><input type="button" data-res="personal_data_prev" value="&#171; 2. Osobni udaje" onClick='showOrderDetails();'><input type="button" value="4. Objednávka &#187;" data-res="order_next" onClick='showOrderOverview();'></div>
           <div id="tn_order" class="hidden"><input type="button" data-res="services_prev" value="&#171; 3. Služby" onClick="showServices();"><input type="button" id="finalOrder" data-res="order" value="Objednat"></div>
         </div>                                
-        <div id="overall" class="hidden">
-        </div>  
-
         </div>
     </div>  
     <div id="imageLoader">

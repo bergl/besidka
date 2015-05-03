@@ -43,7 +43,7 @@ function cleanAllAndValidate(c, shouldValidate) {
 		return false;
 	}
   
-	$("#room_select,#services,#order,#order_details,#frooms,#overall").hide();
+	$("#room_select,#services,#order,#order_details,#frooms").hide();
 	$("#tn_room_select,#tn_services,#tn_order,#tn_order_details").hide();
 
 	currentStep = c;

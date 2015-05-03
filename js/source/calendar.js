@@ -1,4 +1,3 @@
-
 /* Czech initialisation for the jQuery UI date picker plugin. */
 /* Written by Tomas Muller (tomas@tomas-muller.net). */
 jQuery(function($){
@@ -7,7 +6,7 @@ jQuery(function($){
 		prevText: '&#x3c;&#x3c; Předchozí měsíc',
 		nextText: 'Následující měsíc &#x3e;&#x3e;',
 		currentText: 'Nyní',
-		monthNames: ['leden','únor','březen','duben','květen','červen','červenec','srpen','září','říjen','listopad','prosinec'],
+		monthNames: ['Leden','Únor','Březen','Duben','Květen','Červen','Červenec','Srpen','Září','Říjen','Listopad','Prosinec'],
 		monthNamesShort: ['led','úno','bře','dub','kvě','čer','čvc','srp','zář','říj','lis','pro'],
 		dayNames: ['neděle', 'pondělí', 'úterý', 'středa', 'čtvrtek', 'pátek', 'sobota'],
 		dayNamesShort: ['ne', 'po', 'út', 'st', 'čt', 'pá', 'so'],
@@ -27,7 +26,7 @@ function loadMonth(fyear, month, reload) {
 
     var year = fyear.toString().substring(2),
         roomID = g_current_room.id,
-        url = "http://54.247.99.58/order/room?roomID="+roomID+"&year="+fyear+"&month="+month;
+        url = serverAddress + "room?roomID="+roomID+"&year="+fyear+"&month="+month;
 
     $.getJSON(url +"&callback=?",  function(data) {
         }).done(function() {}).fail(function(jqxhr, textStatus, error) {var err = textStatus + ', ' + error;

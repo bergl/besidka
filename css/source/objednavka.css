@@ -44,10 +44,6 @@ a.fRoom {
   background-color: #EEEEEE;
 }
 
-.selected, .monthName {
-	color: #8b0000;
-}
-
 .tab_nav {
 	width: 287px;
 	text-align: left;
@@ -239,12 +235,17 @@ TR {
   font-size: 10px;
 }
 #overall .occup  {
-  background-color: #fe120e;
-  width: 16px;
+  color: #fe120e;
+    cursor: default;
 }
+
+#overall .past  {
+    color: gray;
+    cursor: default;
+}
+
 #overall .free {
-  background-color: #13eba3;
-  width: 16px;
+  color: #13eba3;
 }
 .collapsed #foto {
   width: 106px;
