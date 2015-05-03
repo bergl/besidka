@@ -122,7 +122,7 @@ div#contentLoader {
     background-color: white;
     display: none;
     position: absolute;
-    overflow: visible;
+    overflow: hidden;
     box-shadow: 0 0 10px black, 0 0 0 999px transparent;
     
 }
@@ -354,7 +354,7 @@ div.roomThumbs {
 }
 
 #contentLoader.NARROW #roomText {
-    padding-top: 154px;
+    padding-top: 88px;
 }
 
 #capacity {

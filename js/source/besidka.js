@@ -194,7 +194,7 @@ function addKids() {
 }
 
 function setContentLoaderToTileSize (tile) {
-    contentLoader.offset(tile.offset());
+    contentLoader.css({ top:  tile.offset().top + 'px', left:  tile.offset().left + 'px' });
     contentLoader.width(tile.width());
     contentLoader.height(tile.height());
 }
@@ -326,12 +326,11 @@ function showRoom(el) {
     fillRoomcontent(el.attr("data-room"));
 
     roomContent.width(getContentWidth());
+    setContentLoaderToTileSize(el);
     contentLoader.show();
     roomContent.show();
     contentWidth = getContentWidth();
     contentHeight = roomContent.height();
-
-    setContentLoaderToTileSize(el);
 
     setHash(g_current_room.name);
     async(function () {
