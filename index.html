@@ -3,6 +3,8 @@
 <head>
     <link rel="stylesheet" href="css/besidka.min.css" type="text/css" />
     <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+    <meta name="keywords" content="ubytovani,ubytovaní,jídlo,hotel,keramika,slavonice,besídka,besidka,sklep,boháe,restaurace" lang="cs">
+    <meta name="keywords" content="accomodation,food,hotel,slavonice,ceramics,restaurant" lang="en">    
     <link rel="shortcut icon" href="http://www.besidka.cz/img/favicon.ico" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Design Hotel Besídka</title>
@@ -69,14 +71,31 @@
                 <div class="tile middle room" data-room="VAVRA"></div>
                 <div class="tile small room" data-room="ZAMPIC"></div>
                 <div class="tile small room" data-room="KUSIAK"></div>
+                <div class="tile middle noanim besidkaText blockEllipsis opener"  data-res="besidka_acco_text">
+                    <p>Ubytování v Besídce poskytuje radost nám ubytovatelům a veříme, že stejně se
+                        budete cítit i vy, ubytovaní.
+                    </p>
+                    <p>
+                        Nabízíme dvanáct unikátních pokojů pojmenovaných po patronech,
+                        spoluzakladatelích Besídky a lidech bez nichž by nebyla tím, čím je.
+                    </p>
+                    <p>
+                        Základní cena je vždy pro dvě osoby se snídaní.
+                    </p>
+                    <p>
+                        Pokoje jsou pro vás připraveny nejpozději ve 14.00, a prosíme o jejich uvolnění
+                        do 11.00 v den odjezdu.
+                        Všechny pokoje jsou nekuřácké.
+                    </p>
+                </div>                
                 <div class="tile small room" data-room="GENA"></div>
                 <div class="tile small room" data-room="BOHAC"></div>
                 <div class="tile middle room" data-room="KOUTAK"></div>
-                <div class="tile small room" data-room="VRBA"></div>
                 <div class="tile small besidkaText price actionable" onclick="return hotelOfTheYear();">
                     <p><span data-res="hotel_of_the_year_text">Besídka vyhrála cenu HOTEL ROKU 2013 pro Jihočeský kraj.</span>
                         <a data-res="more_informations" class="redLink" href="#err">Více informací ...</a></p>
-                </div>
+                </div>   
+                <div class="tile small room" data-room="VRBA"></div>
                 <div class="tile middle poukaz noanim opener">
                     <div class="nadpis ACTIVE" data-res="gift_certificate">DÁRKOVÝ POUKAZ</div>
                     <p>Chcete obdarovat své blízké a přátele ?</p>
@@ -115,7 +134,7 @@
                 <div class="tile small room" data-room="KORYS"></div>
                 <div class="tile small room" data-room="RENESANCE"></div>
                 <div class="tile middle room" data-room="HATY"></div>                
-                <div class="tile middle noanim opener besidkaText"  data-res="besidka_text">
+                <div class="tile middle noanim opener besidkaText blockEllipsis"  data-res="besidka_text">
                     <p>„Besídka„ je místem setkání, restaurací, hotelem vyhřezávajícím až do nově otevřeného hostelu „Modrá hvězda“v sousedním propojeném domě, ale i keramickou a textilní dílnou, kde můžete malovat hrnečky nebo tisknout trička.</p>
                     <p>Tento dům koupilo 27.6. 1988 sedm statečných z  divadla Sklep a Manželka národů, totalita byla tou dobou tak hluboká, že si neviděli na špičku nosu a nejdál byli v kredenci.</p>
                     <p>Citát z dob kdy „Besídka“ byla jen divadelně literární formou, než se zhmotnila do podoby domu s  restaurací a barem coby hlavou, břišní kuchyní a jaterně-ledvinovým sklepem a srdcem v  renesančním sále, který není vůbec renesanční.</p>
@@ -125,7 +144,7 @@
                 <div class="tile facebook noanim">
                     <div class="fb-like-box" data-href="https://www.facebook.com/pages/Bes&#xed;dka-Slavonice/136572019720657" data-width="310" data-show-faces="true" data-stream="true" data-show-border="false" data-header="false"></div>
                 </div>
-                <div class="tile middle noanim opener besidkaText reconstruction">
+                <!-- <div class="tile middle noanim opener besidkaText reconstruction">
                     <p class="tileText" data-res="eu_text">Tento projekt Rekonstrukce historického objektu s cílem rozšíření ubytovacích kapacit hotelu Besídka je spolufinancován Evropskou unií.  <br /><br />
                         <div class="nadpis ACTIVE" data-res="rooms">VÍCE INFORMACÍ</div>
                     </p>
@@ -137,7 +156,7 @@
                         <a href="www.g-project.cz">www.g-project.cz</a>
                     </p>
                     <p><img alt="Logo fondu evropské unie" src="img/eufond.png"></p>
-                </div>
+                </div> -->
                 <div class="tile small noanim backhouse"></div>
             </div>
         </div>
@@ -181,7 +200,7 @@
                   <option value="VRBA">Pan VRBA (Pokoje 2 + 2)</option>
                   <option value="HATY">HATY (Pokoje 2 + 2)</option>
                   <option value="RENESANCE">RENESANCE (Konferenční sál)</option>
-                  <option value="HOSTEL">HOSTEL</option>
+                  <option value="HOSTEL">Depandance Murindindi</option> 
               </select>     
               <span class="label mand" data-res="people_count">Počet osob (bez dětí):</span><input class="required countable" type="text" value="2" id="pocet_osob" /> <a id="add_kids" onclick="addKids(); return false;" href="#err" data-res="add_kids"> Přidat děti</a> 
               <div id="to3" class="hidden">
