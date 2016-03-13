@@ -178,6 +178,39 @@ div.pp {
     height: 115px;
 }
 
+div.tile.middle.history {
+    background-image: url('../img/historie.png');
+    overflow: hidden;
+}
+
+    div.tile.middle.history.OPEN {
+        height: 450px;
+    }
+
+div#texts-container .text-closer {
+    position: absolute;
+    right: 20px;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+div#texts-container p {
+    padding: 0 20px;
+}
+
+div#texts-container h4 {
+    margin-left: 20px;
+}
+
+.pre-sklep {
+  background-image: url('../img/pre-sklep.png');
+}
+
+.sklep {
+  background-image: url('../img/sklep.png');
+}
+
 .overview {
     background-color: #3A026F;
     background-image: url('../img/overview.jpg');
@@ -427,7 +460,7 @@ div.tile {
     div.tile.middle {
         width: 310px;
         height: 150px;
-        background-color: blue;
+        background-color: #9D896C;
     }
 
     div.tile.big {
@@ -584,6 +617,10 @@ div.tile {
                     content: "ZAVŘÍT";
                     font-size: 16px;
                 }   
+
+                body.en div.tile.opener.OPEN div.nadpis:before {
+                    content: "CLOSE";
+                }
 
             div.overview.opener.OPEN {
                 height:  1205px;

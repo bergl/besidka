@@ -1,7 +1,8 @@
-/// <reference path="jquery-1.11.1.min.js" />
+﻿/// <reference path="jquery-1.11.1.min.js" />
 
 var contentLoader,
     imgLoader,
+    currLanguageType,
     overallRoomsLoaded,
     LARGE_SIZE = 2 * 320,
     SMALL_SIZE = 320,
@@ -16,6 +17,7 @@ var contentLoader,
     OVERALL_SMALL_SIZE_H = 1800,
     ORDER_HASH = 'order',
     OVERALL_HASH = 'overall',
+    TEXTS_HASH = 'texts-container',
     lastTile;
 
 $("div.cnt").click(function () {
@@ -49,10 +51,18 @@ function getCookie(cname) { //clean
 }
 
 function switchLanguage(language) {
+    var prevLanguageType = currLanguageType;
+    var bdy = $(document.body);
+    
+    currLanguageType = language;
     currentLocalisation = localisation[language];
     $.datepicker.setDefaults($.datepicker.regional[language]);
     translateAll();
     updateData();
+    if (prevLanguageType) {
+        bdy.removeClass(prevLanguageType);
+    }
+    bdy.addClass(currLanguageType);
 }
 
 function setLanguage(language) {
@@ -89,9 +99,9 @@ function translateAll() {
 }
 
 function resetContenLoaderHeight () {
-    contentLoader.height("auto");   
+    contentLoader.height("auto");
     var content = $("#contentLoader > div");
-    content.height("auto");       
+    content.height("auto");
     return content;
 }
 
@@ -103,11 +113,11 @@ function resetContenLoaderSize () {
 }
 
 function hideContentLoader() {
-    contentLoader.addClass("HIDING");       
-    contentLoader.removeClass("FULLSCREEN");       
+    contentLoader.addClass("HIDING");
+    contentLoader.removeClass("FULLSCREEN");
     setContentLoaderToTileSize(lastTile);
     setTimeout(function () {
-        contentLoader.removeClass("HIDING");       
+        contentLoader.removeClass("HIDING");
         contentLoader.hide();
         resetContenLoaderSize();  
     }, 400);
@@ -127,7 +137,7 @@ function showFullscreenContent(contentWidth, contentHeight, tile) {
 
     setTimeout(function () {
         resetContenLoaderHeight();
-    }, 400);    
+    }, 400);
 }
 
 function fillRoomcontent(roomName) {
@@ -294,6 +304,7 @@ function showOverall() {
 
     prepareOverall();
     $("div.orderContent").hide();
+    $("#texts-container").hide();
     contentLoader.show();
     overall.width(getOverAllContentWidth());
     overall.height(getOverAllContentWidth());
@@ -316,12 +327,46 @@ function showOverall() {
     });
 }
 
+function showTexts(el) {
+    var text = el.attr("data-text"),
+        texts = $("#texts-container"),
+        textsContainer = $("#texts-container .container"),
+        translated = currentLocalisation[text];
+
+    if (texts.is(':visible')) {
+        hideContentLoader();
+        return false;
+    }
+
+    textsContainer.html(translated);
+    $("div.orderContent").hide();
+    $("div.roomContent").hide();
+    $("#overall").hide();
+
+    contentLoader.show();
+    texts.width(getOverAllContentWidth());
+    texts.height(getOverAllContentWidth());
+    
+    setContentLoaderToTileSize(el);
+
+    texts.show();
+
+    var contentWidth = getOverAllContentWidth();
+    var contentHeight = getOverAllContentHeight();
+
+    async(function () {
+        showFullscreenContent(contentWidth, contentHeight, el);
+        setHash(TEXTS_HASH);
+    });
+}
+
 function showRoom(el) {
     var roomContent = $("div.roomContent"),
         contentWidth,
         contentHeight;
 
     $("div.orderContent").hide();
+    $("#texts-container").hide();
     $("#overall").hide();
     fillRoomcontent(el.attr("data-room"));
 
@@ -348,6 +393,7 @@ function showOrder() {
     }
 
     $("#overall").hide();
+    $("#texts-container").hide();
     prepareOrder();
     contentLoader.show();
     orderContent.width(getContentWidth());
@@ -520,8 +566,13 @@ $().ready(function () {
         $(".opener").click(function(event) {
             if (!$(event.target).parents('.content').length) {
                 toggle($(this));
+                event.stopPropagation();
             }
         }); 
+
+        $(".text-opener").click(function(event) {
+            showTexts($(event.target));
+        });
 
         wind.click(disposeFullScreen);
 
