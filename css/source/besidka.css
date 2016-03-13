@@ -195,6 +195,10 @@ div#texts-container .text-closer {
     cursor: pointer;
 }
 
+div#texts-container {
+    padding-bottom: 40px;
+}
+
 div#texts-container p {
     padding: 0 20px;
 }
