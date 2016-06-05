@@ -261,6 +261,12 @@
               <div id="ordered_services"></div><br />
               <span class="label mand" data-res="approx_price">Přibližná cena (beze slev/služeb):</span><span class="tmpPrice"></span>
         </div>
+        <div id="confirmation" class="hidden">
+            <span data-res="confirmation">Objednávka byla přijata. Potvrzení bylo zasláno na adresu</span><br>
+            <span id="confirmation_email"></span><br>
+            <input type="button" data-res="confirmation-next" onClick='orderNextRoom();' value="Objednat další pokoj"><br>
+            <input type="button" value="Zavřít" data-res="close" onClick='closeConfirmation();'>
+        </div>
         <div id="tn_navigation">
           <div id="tn_room_select"><input type="button" value="Zavřít" data-res="close" onClick='hideContentLoader();'><input type="button" value="2. Osobní Údaje &#187;" data-res="personal_data_next" onClick='showOrderDetails();'></div>
           <div id="tn_order_details" class="hidden"><input type="button" data-res="room_select_prev" value="&#171; 1. Výběr pokoje" onClick='showRoomSelect();'><input type="button" value="3. Služby &#187;" data-res="services_next" onClick='showServices();'></div>

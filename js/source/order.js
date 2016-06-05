@@ -324,12 +324,28 @@ function orderRoom() {
         console.log("Request Failed: " + err);}).always(function(data,textStatus) {
   	  	$("#finalOrder").val(bValue);
       	if (data == "0") {
-      		alert("Požadavek na rezervaci byl zapsán.");
+          showConfirmation();
+      		//alert("Požadavek na rezervaci byl zapsán.");
       	}
         else alert("Rezervaci nelze zapsat, protože koliduje s jinou potvrzenou rezervací.");
 	});
 }
 
+function showConfirmation() {
+  $("#confirmation_email").text($("#email").val()); 
+  $("#confirmation").show();
+}
+
+function closeConfirmation() {
+  $("#confirmation").hide();
+  showRoomSelect();
+  hideContentLoader();
+}
+
+function orderNextRoom() {
+  $("#confirmation").hide();
+  showRoomSelect();
+}
 
 function enableItem(item, enable) {
 	if (enable) {

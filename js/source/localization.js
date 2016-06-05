@@ -72,6 +72,8 @@ var localisation = {
 		'services_next' : '3. Služby »',
 		'order_next' : '4. Objednávka »',
 		'order' : 'Objednat',
+		'confirmation': 'Objednávka byla přijata. Potvrzení bylo zasláno na adresu',
+		'confirmation-next': 'Objednat další pokoj',
 		'besidka_history_pre': '\
 			<h4>Předsklepovská</h4>\
             <p> Máme-li mluvit o domě, je třeba v krátkosti zmínit i historii města kolem stojícího.Založeno bylo ve 13. století Přemyslem Otakarem II. v sousedství původní slovanské vesnice. Král železný a zlatý pozval do této téměř liduprázdné pohraniční krajiny německé kolonisty, netuše, že tím ovlivní historii města až do 21. století. V roce 1278 nedlouho před svou smrtí na nedalekém Moravském poli, kázal město opevnit a v roce 1359 jeho neméně slavný následník Karel IV. udělil městu městská práva. Hradby se hodily hned několikrát, nejdříve proti Husitům, kteří roku 1423 vypálili předměstí, ale město nedobyli, tak i během třicetileté války, kdy se o dobytí města - bašty protestantů, snažilo několikrát císařské vojsko. Až roku 1645 jej bez odporu obsadili Švédové a vydrancovali. Shodou okolností to byly jinak pro Slavonice zlaté časy. Roku 1560 byla založena poštovní stanice na trase Praha Vídeň a až do jejího zrušení a přemístění do Znojma roku 1750 město bohatlo a prosperovalo. Pak začal dlouhotrvající úpadek s kratším nádechem v první polovině 20. století následovaný temným obdobím poválečného odsunu a ospalou izolací totalitního pohraničí.</p>\
@@ -110,6 +112,8 @@ var localisation = {
 		'price_per_night' : 'CZK/night',
 		'prices' : 'PRICES',
 		'price' : 'Price:',
+		'confirmation': 'Order was accepted. Confirmation was sent to address',
+		'confirmation-next': 'Order next room',
 		'price_season' : 'Price season:',
 		'gift_certificate' : 'GIFT CERTIFICATE',
 		'besidka_text' : '\
