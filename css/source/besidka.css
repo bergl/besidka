@@ -11,6 +11,10 @@ body {
     color: #8B0000;
     text-decoration: none;}
 
+.keramika {
+  background-image: url(../img/keramika.jpg);
+}
+
 .navBut {
     width: 41px;
     height: 41px;

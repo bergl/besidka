@@ -7,7 +7,7 @@ var localisation = {
 		'of' : 'z',
 		'persons' : 'osob',
 		'extrabed' : 'přistýlek',
-		'title_restaurace' : 'RESTAURACE',		
+		'title_restaurace' : 'RESTAURACE',
 		'rooms' : 'POKOJE',
 		'history' : 'HISTORIE',
 		'capacity' : 'Kapacita:',
@@ -19,7 +19,8 @@ var localisation = {
 		'prices' : 'CENY',
 		'price' : 'Cena:',
 		'price_season' : 'Cena sezóně:',
-		'gift_certificate' : 'DÁRKOVÝ POUKAZ',
+    'gift_certificate' : 'DÁRKOVÝ POUKAZ',
+    'ceramics_mariz': 'KERAMIKA MAŘÍŽ',
 		'besidka_text' : '\
 			<p>„Besídka„ je místem setkání, restaurací, hotelem vyhřezávajícím až do nově otevřeného hostelu „Modrá hvězda“v sousedním propojeném domě, ale i keramickou a textilní dílnou, kde můžete malovat hrnečky nebo tisknout trička.</p>\
             <p>Tento dům koupilo 27.6. 1988 sedm statečných z  divadla Sklep a Manželka národů, totalita byla tou dobou tak hluboká, že si neviděli na špičku nosu a nejdál byli v kredenci.</p>\
@@ -102,7 +103,7 @@ var localisation = {
 		'persons' : 'persons',
 		'extrabed' : 'extra beds',
 		'title_restaurace' : 'RESTAURANT',
-		'rooms' : 'ROOMS',	
+		'rooms' : 'ROOMS',
 		'history' : 'HISTORY',
 		'capacity' : 'Capacity:',
 		'order_room' : 'ORDER ROOM',
@@ -115,7 +116,8 @@ var localisation = {
 		'confirmation': 'Order was accepted. Confirmation was sent to address',
 		'confirmation-next': 'Order next room',
 		'price_season' : 'Price season:',
-		'gift_certificate' : 'GIFT CERTIFICATE',
+    'gift_certificate' : 'GIFT CERTIFICATE',
+    'ceramics_mariz': 'CERAMIC MAŘÍŽ',
 		'besidka_text' : '\
 			<p>“Besidka” is a meeting place, restaurant, gallery and a design hotel, now spanning a recently opened hostel “The Blue Star” in the neighbouring house as well as a ceramics and textiles workshop where you can design and print your own t-shirt and even paint a cup.</p>\
 			<p>The house in which “Besidka” is located, was bought on the 27th of June 1988 by seven brave men from the Sklep theatre and the Wife of the Nations, back then the totalitarian regime was still so deep that they didn’t see further than the tip of their noses and couldn’t get any further than the closet. </p>\
@@ -190,5 +192,5 @@ var localisation = {
 	}
 };
 
-var defaultLanguage = 'cs'; 
+var defaultLanguage = 'cs';
 	currentLocalisation = localisation[defaultLanguage];
