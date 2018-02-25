@@ -69,7 +69,7 @@ var rooms = {
     "GENA": new Room("gena", "Gena", "Manž. Narodů",  "2 + 2",4, 4, BOTTOM_FLOOR, 1490, 1290, 1290, 990, true, 21, GENA_ID, 2, true, false),
     "HANAK": new Room("hanak", "Hanak", "Hanák",  "2 + 4",6, 2, BOTTOM_FLOOR, 1490, 1290, 1290, 990, true, 35, HANAK_ID, 2, true, false),
     "KORYS": new Room("korys", "Korys", "Korýs",  "2 + 0",2, 4, SECOND_FLOOR, 1290, 1190, 1290, 990, true, 17, KORYS_ID, 2, true, false),
-    "KOUTAK": new Room("koutak", "Koutak", "Kouťák",  "2 + 2",4, 4, SECOND_FLOOR, 1490, 1290, 1290, 1290, true, 29, KOUTAK_ID, 2, true, false),
+    "KOUTAK": new Room("koutak", "Koutak", "Kouťák",  "2 + 2",4, 4, SECOND_FLOOR, 1490, 1490, 1290, 1290, true, 29, KOUTAK_ID, 2, true, false),
     "KUSIAK": new Room("kusiak", "Kusiak", "Kušiak",  "2 + 4",6, 3, SECOND_FLOOR, 1490, 1290, 1290, 990, true, 28, KUSIAK_ID, 2, true, false),
     "VAVRA": new Room("vavra", "Vavra", "Vávra",  "2 + 4",6, 4, SECOND_FLOOR, 1690, 1690, 1490, 1490, true, 51, VAVRA_ID, 2, true, false),
     "ZAMPIC": new Room("zampic", "Zampic", "Žampa",  "2 + 1",3, 3, SECOND_FLOOR, 1490, 1290, 1290, 990, true, 33, ZAMPIC_ID, 2, true, false),
