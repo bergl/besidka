@@ -38,6 +38,13 @@ var localisation = {
 	    'ceplecha_desc' : "<a>PAN CEPLECHA</a><br/><br/>Pod renesančním stropem  Besídky a za sklem zurčící Kali Gandaki v kamenech Himaláje, nelze se netěšit do koupelny, kde člověk není nikdy sám.",
 	    'vrba_desc' : "<a>PAN VRBA</a><br/><br/>Pokoj bez bariér i motorkářem průjezdný, kde vrba z toskánského pobřeží liry plodící, dala základ celé Besídce bez potřeby bankéřův.",
 	    'haty_desc' : "<a>MR. HATY</a><br/><br/>Za posuvnými dveřmi v posteli pod mostem lze přemítat o iracionalitě a transcendentnosti světa a čísla nad vanou v koupelně, kde Ludolf zanechal svou geometrickou stopu, protože i Haty byl geometrem.",
+	    'tobias_desc' :  "<a>PAN MÍCHA</a><br/><br/>Dvoulůžkový pokoj s až x  přistýlkami. Tady bude nejahy text ............Koupelna vymalovaná vlastnoručně Tobiášem Míchou.",
+	    'prezident_desc' :  "<a>PAN VANĚK</a><br/><br/>Dvoulůžkový pokoj s až x  přistýlkami. Tady bude nejahy text ............Koupelna vymalovaná vlastnoručně panem prezidentem",
+	    'vivienne_desc' :  "<a>PANÍ HATFIELDOVÁ</a><br/><br/>Dvoulůžkový pokoj s až x  přistýlkami. Tady bude nejahy text ............Koupelna vymalovaná vlastnoručně Vivienne Hatfieldovou.",
+	    'starsiosklivejsi_desc' :  "<a>STARŠÍ OŠKLIVĚJŠÍ</a><br/><br/>Dvoulůžkový pokoj s až x  přistýlkami. Tady bude nejahy text ............Koupelna vymalovaná vlastnoručně Tobiášem Míchou.",
+	    'mladsihezci_desc' :  "<a>MLADŠÍ HEZČÍ</a><br/><br/>Dvoulůžkový pokoj s až x  přistýlkami. Tady bude nejahy text ............Koupelna vymalovaná vlastnoručně Tobiášem Míchou.",
+	    'trossketos_desc' :  "<a>TROS SKETOS</a><br/><br/>Dvoulůžkový pokoj s až x  přistýlkami. Tady bude nejahy text ............Koupelna vymalovaná vlastnoručně Třemi Sketos.",
+
 	    'selected_room': 'Vybraný pokoj:',
 	    'people_count': 'Počet osob (bez dětí):',
 	    'add_kids': 'Přidat děti',

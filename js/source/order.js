@@ -235,10 +235,16 @@ function showOrderOverview() {
          console.log("Request Failed: " + err);}).always(function(data) {
          curr = data[0];
 
+	 // iterate over rooms
          for (i = 0; i < roomsArray.length; i++) {
              room = $("<div class='room'></div>");
              room.append("<span class='name'>" + roomsArray[i].full_name + "</span>");
              days = curr[i];
+// TEMPORARY HACK until server upgraded to new version HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK 
+	     if (i > 13) {
+		 days = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // fake 31 occupied days for nonexistent room
+	     }
+             // iterate over days in months
              for (d = 0; d < days.length; d++) {
                  free = days[d] != "0";
                  m = current_month.getMonth()+1;
