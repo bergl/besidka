@@ -80,7 +80,7 @@ var rooms = {
     "VAVRA": new Room("vavra", "Vavra", "Vávra",  "2 + 4",6, 4, SECOND_FLOOR, 1690, 1690, 1490, 1490, true, 51, VAVRA_ID, 2, true, false),
     "ZAMPIC": new Room("zampic", "Zampic", "Žampa",  "2 + 1",3, 3, SECOND_FLOOR, 1490, 1290, 1290, 990, true, 33, ZAMPIC_ID, 2, true, false),
     "RENESANCE": new Room("renesance", "KonferecniSal", "Konferen. sál","100 m2", 0, 7, BOTTOM_FLOOR, '?', '?','?', '?', true, 100, RENESANCE_ID, "moc", false, false),
-    "HOSTEL" : new Room("hostel", "hostel","Hostel", "moc", 0, 0, HOSTEL, 150, 150,150, 150, false, HOSTEL_ID, "moc", false, false),
+//    "HOSTEL" : new Room("hostel", "hostel","Hostel", "moc", 0, 0, HOSTEL, 150, 150,150, 150, false, HOSTEL_ID, "moc", false, false),
     "KOUCKY": new Room("koucky", "Koucky", "Koucký",  "2 + 2",4, 4, BACK_HOUSE, 1690, 1690, 1490, 1490, false, 42, KOUCKY_ID, 2, KOUCKY_ID, 2, true, true),
     "CEPLECHA": new Room("ceplecha", "Ceplecha", "Ceplecha",  "2 + 2",4, 4, BACK_HOUSE, 1490, 1490, 1290, 1290, false, 30, CEPLECHA_ID, 2, true, true),
     "VRBA": new Room("vrba", "Vrba", "Vrba",  "2 + 2",4, 4, BACK_HOUSE, 1490, 1290, 1290, 990, false, 27, VRBA_ID, 2, true, true),

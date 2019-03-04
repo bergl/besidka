@@ -237,13 +237,19 @@ function showOrderOverview() {
 
 	 // iterate over rooms
          for (i = 0; i < roomsArray.length; i++) {
+	     // TEMPORARY HACK until server upgraded to new version HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK 
+	     if (i === 9)
+		 continue; // skip hostel
+
              room = $("<div class='room'></div>");
              room.append("<div class='name'>" + roomsArray[i].full_name + "</div>");
              days = curr[i];
-// TEMPORARY HACK until server upgraded to new version HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK 
+
+	     // TEMPORARY HACK until server upgraded to new version HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK 
 	     if (i > 13) {
 		 days = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // fake 31 occupied days for nonexistent room
 	     }
+
              m = current_month.getMonth()+1;
              if (m < 10) m = "0"+m;
 	     var date1 = m + "/01/" + current_month.getFullYear();
