@@ -631,7 +631,7 @@ div.tile {
                 }
 
             div.overview.opener.OPEN {
-                height:  1205px;
+                height:  1655px;
             }
 
             div.tile.opener.poukaz.OPEN {
@@ -691,22 +691,18 @@ div.tile.opener.preview.OPEN {
     width: calc(100% - 70px);
 }
 
-    #overall .first {
-        margin-left: 125px;
-    }
-
     #overall .room {
         margin-top: 5px;
-        margin-left: 20px;
+        margin-left: 17px;
         position: relative;
-        width: 299px;
+        width: 220px;
         display: inline-block;
     }
 
         #overall .room .name {
-            position: absolute;
-            top: 4px;
-            left: 5px;
+            margin-top: 4px;
+            margin-left: 5px;
+            width: 220px;
             color: #B5B4B6;
         }
 
