@@ -142,6 +142,15 @@ var localisation = {
 	    'ceplecha_desc' : "<a>MR. CEPLECHA</a><br/><br/>Under Besídka‘s Reinessaince ceiling, in the shadow of the mighty Kali Gandaki cascading over Himalayan pebbles, it is impossible not to cherish the bathroom where one is never alone.<br/>",
 	    'vrba_desc' : "<a>MR. VRBA</a><br/><br/>A room without barriers, accessible to even an enthusiastic motorcyclist, where a willow from the Tuscan coast gave rise to Besidka, with no need of a banker’s hand.<br/>",
 	    'haty_desc' : "<a>MR. HATY</a><br/><br/>In a bed behind the partition you can contemplate the irrationality and transcendence of the world and numbers, since Ludolf left a geometric footprint in the bathroom and Haty was a geometer too.<br/>",
+
+	    'tobias_desc' :  "<a>MR. MÍCHA</a><br/><br/>Double room with up X extra beds. Here goes some text FIX THIS.",
+	    'prezident_desc' :  "<a>MR. VANĚK</a><br/><br/>Double room with up X extra beds. Here goes some text FIX THIS.",
+	    'vivienne_desc' :  "<a>MRS. HATFIELDOVÁ</a><br/><br/>Double room with up X extra beds. Here goes some text FIX THIS.",
+	    'starsiosklivejsi_desc' :  "<a>STARŠÍ OŠKLIVĚJŠÍ</a><br/><br/>Double room with up X extra beds. Here goes some text FIX THIS.",
+	    'mladsihezci_desc' :  "<a>MLADŠÍ HEZČÍ</a><br/><br/>Double room with up X extra beds. Here goes some text FIX THIS.",
+	    'trossketos_desc' :  "<a>TROS SKETOS</a><br/><br/>Dvoulůžkový Double room with up X extra beds. Here goes some text FIX THIS.",
+
+
 		'selected_room': 'Selected room:',
 	    'people_count': 'Number of people (adults):',
 	    'add_kids': 'Add kids',
