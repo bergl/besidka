@@ -286,6 +286,11 @@ function hotelOfTheYear() {
     return false;
 }
 
+function obchodniPodminky() {
+    window.open('obchodnipodminkyBesidka.html', '_blank', 'width=800,height=1000,resizable=yes');
+    return false;
+}
+
 function prepareOverall() {
     if (!overallRoomsLoaded) {
         overallRoomsLoaded = true;

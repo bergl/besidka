@@ -471,6 +471,12 @@ div.tile {
         background-color: #9D896C;
     }
 
+    div.tile.lowmiddle {
+        width: 310px;
+        height: 70px;
+        background-color: #9D896C;
+    }
+
     div.tile.big {
         width: 310px;
         height: 310px;
@@ -605,6 +611,10 @@ div.tile {
     }
 
         div.tile.middle.opener {
+            transition: height 0.5s;
+        }
+
+        div.tile.lowmiddle.opener {
             transition: height 0.5s;
         }
 
