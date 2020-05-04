@@ -34,12 +34,11 @@
                         <div class="tile small room" data-room="CEPLECHA"></div>
                         <div class="tile small room" data-room="KOUCKY"></div>
                         <div class="tile small room" data-room="RENESANCE"></div>
-                        <div class="tile small room" data-room="PREZIDENT"></div>
                         <div class="tile small room" data-room="TROSSKETOS"></div>
                         <div class="tile small room" data-room="VIVIENNE"></div>
                         <div class="tile small room" data-room="STARSIOSKLIVEJSI"></div>
                         <div class="tile small room" data-room="MLADSIHEZCI"></div>
-                        <div class="tile small room" data-room="TOBIAS"></div>
+                        <div class="tile small room" data-room="PETKA"></div>
                         <div class="tile small  noanim backhouse"></div>
                     </div>
                 </div>
@@ -70,16 +69,15 @@
                         <div id="gmap"></div>
                     </div>
                 </div>
-                <div class="tile small room" data-room="TOBIAS"></div>
-                <div class="tile middle room" data-room="VIVIENNE"></div>
+                <div class="tile small room" data-room="PETKA"></div>
                 <div class="tile small booking">
                     <a href="http://www.booking.com/hotel/cz/besidka.html?aid=330843;lang=en-us" target="_blank">
                         <img src="img/booknow_en-us.gif"/>
                     </a>
                 </div>
-                <div class="tile lowmiddle besidkaText price actionable" onclick="return obchodniPodminky();">
-                    <p><span>Pro zobrazení obchodních podmínek hotelu Besídka klikněte zde. </span>
-		      </p>
+                 <div class="tile small besidkaText price actionable" onclick="return hotelOfTheYear();">
+                    <p><span data-res="hotel_of_the_year_text">Besídka vyhrála cenu HOTEL ROKU 2013 pro Jihočeský kraj.</span>
+                        <a data-res="more_informations" class="redLink" href="#err">Více informací ...</a></p>
                 </div>
             </div>
             <div class="column">
@@ -91,8 +89,8 @@
                         budete cítit i vy, ubytovaní.
                     </p>
                     <p>
-                        Nabízíme dvanáct unikátních pokojů pojmenovaných po patronech,
-                        spoluzakladatelích Besídky a lidech bez nichž by nebyla tím, čím je.
+                        Nabízíme osmnáct unikátních pokojů pojmenovaných po patronech,
+                        spoluzakladatelích Besídky a lidech bez nichž by nebyla tím, čím je, ale i dle sklepovských divadelních hrdinech v nejnověji otevřeném divadelním křídle.
                     </p>
                     <p>
                         Základní cena je vždy pro dvě osoby se snídaní.
@@ -109,10 +107,6 @@
                 <div class="tile small room" data-room="MLADSIHEZCI"></div>
                 <div class="tile small room" data-room="TROSSKETOS"></div>
                 <div class="tile middle room" data-room="STARSIOSKLIVEJSI"></div>
-
-                <div class="tile middle noanim besidkaText blockEllipsis opener" data-res="rekonstrukce-text">
-		  <p align=center>Tady budou fotky rekonstrukce </p>
-		</div>
             </div>
  
            <div class="column">
@@ -146,17 +140,13 @@
                 <div class="tile small room" data-room="KORYS"></div>
                 <div class="tile small room" data-room="RENESANCE"></div>
                 <div class="tile middle room" data-room="HATY"></div>
-                <div class="tile middle room" data-room="PREZIDENT"></div>
 
                 <div class="tile middle noanim opener besidkaText blockEllipsis" data-res="besidka_text">
                     <p>„Besídka„ je místem setkání, restaurací, hotelem vyhřezávajícím až do nově otevřeného hostelu „Modrá hvězda“v sousedním propojeném domě, ale i keramickou a textilní dílnou, kde můžete malovat hrnečky nebo tisknout trička.</p>
                     <p>Tento dům koupilo 27.6. 1988 sedm statečných z  divadla Sklep a Manželka národů, totalita byla tou dobou tak hluboká, že si neviděli na špičku nosu a nejdál byli v kredenci.</p>
                     <p>Citát z dob kdy „Besídka“ byla jen divadelně literární formou, než se zhmotnila do podoby domu s  restaurací a barem coby hlavou, břišní kuchyní a jaterně-ledvinovým sklepem a srdcem v  renesančním sále, který není vůbec renesanční.</p>
                 </div>
-                 <div class="tile small besidkaText price actionable" onclick="return hotelOfTheYear();">
-                    <p><span data-res="hotel_of_the_year_text">Besídka vyhrála cenu HOTEL ROKU 2013 pro Jihočeský kraj.</span>
-                        <a data-res="more_informations" class="redLink" href="#err">Více informací ...</a></p>
-                </div>
+                <div class="tile middle room" data-room="VIVIENNE"></div>
            </div>
             <div class="column">
                 <div class="tile facebook noanim">
@@ -173,21 +163,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="tile middle poukaz noanim opener">
-                    <div class="nadpis ACTIVE" data-res="gift_certificate">DÁRKOVÝ POUKAZ</div>
-                    <p>Chcete obdarovat své blízké a přátele ?</p>
-                    <p>Připravili jsme pro vás dárkový poukaz, který je příležitostí vybrat přesně to, co potřebujete. Je jen na vás, zda to bude večeře, pobyt v hotelu, keramika či vše dohromady.Pokud budeme schopni splníme vaše přání. Napište nám nebo zavolejte.
-                    </p>
-                    <p>besidka@besidka.cz<br/> +420 606 212 070</p>
-                </div>
+                    <div class="tile middle poukaz besidkaText noanim opener">
+                      <div class="nadpis ACTIVE" data-res="gift_certificate">DÁRKOVÝ POUKAZ</div>
+		       <div class="biggest noanim besidkaText" data-res="gift_certificate_text">
+                          <p>Chcete obdarovat své blízké a přátele ?</p>
+                          <p>Připravili jsme pro vás dárkový poukaz, který je příležitostí vybrat přesně to, co potřebujete. Je jen na vás, zda to bude večeře, pobyt v hotelu, keramika či vše dohromady.Pokud budeme schopni splníme vaše přání. Napište nám nebo zavolejte.
+                          </p>
+                          <p>besidka@besidka.cz<br/> +420 606 212 070</p>
+		       </div>
+		    </div>
                 <a href="http://mariz.cz" target="_blank">
                   <div class="tile middle keramika">
                     <div class="nadpis ACTIVE" data-res="ceramics_mariz">KERAMIKA MAŘÍŽ</div>
                   </div>
                 </a>
-                <div class="tile middle noanim besidkaText blockEllipsis opener" data-res="rekonstrukce-text">
-		  <p align=center>Tady bude ??oteviraci?? okno "A pak uvidis" </p>
-		</div>
+                <div class="tile lowmiddle besidkaText price actionable" onclick="return obchodniPodminky();">
+                    <p><span>Pro zobrazení obchodních podmínek hotelu Besídka klikněte zde. </span>
+		      </p>
+                </div>
+
             </div>
         </div>
     <div id="contentLoader">
@@ -236,12 +230,11 @@
                   <option value="HATY">HATY (Pokoje 2 + 2)</option>
                   <option value="RENESANCE">Konferenční sál</option>
                   <option value="HOSTEL">Depandance Murindindi</option>
-		  <option value="PREZIDENT">Prezidentský apartman Ferdinanda Vaňka (Extra magnificent classe 4 + 4)</option>
 		  <option value="TROSSKETOS">Tros Sketos  (Pokoje 2 + 2)</option>
 		  <option value="VIVIENNE">Vivienne Hatfieldová  (Pokoje 2 + 2)</option>
 		  <option value="STARSIOSKLIVEJSI">Starší ošklivější  (Pokoje 2 + 2)</option>
 		  <option value="MLADSIHEZCI">Mladší hezčí  (Pokoje 2 + 2)</option>
-		  <option value="TOBIAS">Tobiáš Mícha  (Pokoje 2 + 2)</option>
+		  <option value="PETKA">Pětka  (Pokoje 2 + 2)</option>
               </select>
               <span class="label mand" data-res="people_count">Počet osob (bez dětí):</span><input class="required countable" type="text" value="2" id="pocet_osob" /> <a id="add_kids" onclick="addKids(); return false;" href="#err" data-res="add_kids"> Přidat děti</a>
               <div id="to3" class="hidden">
@@ -308,7 +301,7 @@
         </div>
         <div id="tn_navigation">
           <div id="tn_room_select"><input type="button" value="Zavřít" data-res="close" onClick='hideContentLoader();'><input type="button" value="2. Osobní Údaje &#187;" data-res="personal_data_next" onClick='showOrderDetails();'></div>
-          <div id="tn_order_details" class="hidden"><input type="button" data-res="room_select_prev" value="&#171; 1. Výběr pokoje" onClick='showRoomSelect();'><input type="button" value="3. Služby &#187;" data-res="services_next" onClick='showServices();'></div>
+          <div id="tn_order_details" class="hidden"><input type="button" data-res="room_select_pre2v" value="&#171; 1. Výběr pokoje" onClick='showRoomSelect();'><input type="button" value="3. Služby &#187;" data-res="services_next" onClick='showServices();'></div>
           <div id="tn_services" class="hidden"><input type="button" data-res="personal_data_prev" value="&#171; 2. Osobni udaje" onClick='showOrderDetails();'><input type="button" value="4. Objednávka &#187;" data-res="order_next" onClick='showOrderOverview();'></div>
           <div id="tn_order" class="hidden"><input type="button" data-res="services_prev" value="&#171; 3. Služby" onClick="showServices();"><input type="button" id="finalOrder" data-res="order" value="Objednat"></div>
         </div>

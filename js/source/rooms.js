@@ -17,7 +17,7 @@ var TROSSKETOS_ID       = 23;
 var VIVIENNE_ID         = 24;
 var STARSIOSKLIVEJSI_ID = 25;
 var MLADSIHEZCI_ID      = 26;
-var TOBIAS_ID           = 27;
+var PETKA_ID           = 27;
 
 var BOTTOM_FLOOR = 0,
     SECOND_FLOOR = 1,
@@ -93,7 +93,7 @@ var rooms = {
    "VIVIENNE":         new Room("vivienne", "Vivienne", "Vivienne Hatfieldová", "2 + 2", 4, 1, HOSTEL, 1490, 1290, 1290, 990, false, 27, VIVIENNE_ID, 2, true, true),
     "STARSIOSKLIVEJSI": new Room("starsiosklivejsi", "Starsiosklivejsi", "Starší ošklivější", "2 + 2", 4, 1, HOSTEL, 1490, 1290, 1290, 990, false, 27, STARSIOSKLIVEJSI_ID, 2, true, true),
     "MLADSIHEZCI":      new Room("mladsihezci", "Mladsihezci", "Mladší hezčí", "2 + 2", 4, 1, HOSTEL, 1490, 1290, 1290, 990, false, 27, MLADSIHEZCI_ID, 2, true, true),
-    "TOBIAS":           new Room("tobias", "Tobias", "Tobiáš Mícha", "2 + 2", 4, 1, HOSTEL, 1490, 1290, 1290, 990, false, 27, TOBIAS_ID, 2, true, true)
+    "PETKA":           new Room("petka", "Petka", "Pětka", "2 + 2", 4, 1, HOSTEL, 1490, 1290, 1290, 990, false, 27, PETKA_ID, 2, true, true)
 };
 
 var roomsArray = [];
