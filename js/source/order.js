@@ -1,6 +1,6 @@
  var orderLoaded,
- //    serverAddress = 'http://54.247.99.58/order/',
-     serverAddress =  'http://test.besidka.cz/reservation_server/www/order/', 
+     serverAddress = 'http://54.247.99.58/order/',
+ //    serverAddress =  'http://test.besidka.cz/reservation_server/www/order/', 
     current_month = new Date();
 
 //sezóna
@@ -239,23 +239,20 @@ function showOrderOverview() {
 	 // iterate over rooms
          for (i = 0; i < roomsArray.length; i++) {
 	     // TEMPORARY HACK until server upgraded to new version HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK 
-	     if (i === 9)
-		 continue; // skip hostel
+	     if (i === 9 || i === 13)
+		 continue; // skip hostel or prezident
 
              room = $("<div class='room'></div>");
              room.append("<div class='name'>" + roomsArray[i].full_name + "</div>");
              days = curr[i];
 
-	     // TEMPORARY HACK until server upgraded to new version HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK 
-	     if (i > 13) {
-		 days = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // fake 31 occupied days for nonexistent room
-	     }
-
              m = current_month.getMonth()+1;
              if (m < 10) m = "0"+m;
 	     var date1 = m + "/01/" + current_month.getFullYear();
 	     var dateOf1stDay = new Date(date1);
-	     var offsetOf1stDay = dateOf1stDay.getDay()*30; // 30 px per day
+	     var offsetOf1stDay = (dateOf1stDay.getDay()-1)*30; // 30 px per day
+	     if (offsetOf1stDay < 0)
+		 offsetOf1stDay = 6 * 30;
              // iterate over days in months
              for (d = 0; d < days.length; d++) {
                  free = days[d] != "0";
