@@ -238,9 +238,9 @@ function showOrderOverview() {
 
 	 // iterate over rooms
          for (i = 0; i < roomsArray.length; i++) {
-	     // TEMPORARY HACK until server upgraded to new version HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK 
-	     if (i === 9 || i === 13)
-		 continue; // skip hostel or prezident
+
+	     if (i === 9) // skip muridindi
+		 continue; 
 
              room = $("<div class='room'></div>");
              room.append("<div class='name'>" + roomsArray[i].full_name + "</div>");

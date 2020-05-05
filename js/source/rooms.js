@@ -1,23 +1,23 @@
-var BOHAC_ID     = 1;
-var GENA_ID      = 2;
-var HANAK_ID     = 3;
-var KORYS_ID     = 4;
-var KOUTAK_ID    = 5;
-var KUSIAK_ID    = 6;
-var VAVRA_ID     = 7;
-var ZAMPIC_ID     = 8;
-var RENESANCE_ID = 9;
-var HOSTEL_ID = 13;
-var KOUCKY_ID = 18;
-var CEPLECHA_ID = 19;
-var VRBA_ID = 20;
-var HATY_ID = 21;
-var PREZIDENT_ID        = 22;
-var TROSSKETOS_ID       = 23;
-var VIVIENNE_ID         = 24;
-var STARSIOSKLIVEJSI_ID = 25;
-var MLADSIHEZCI_ID      = 26;
-var PETKA_ID           = 27;
+var BOHAC_ID     = 1; // 0
+var GENA_ID      = 2; // 1
+var HANAK_ID     = 3; // 2
+var KORYS_ID     = 4; // 3
+var KOUTAK_ID    = 5; // 4
+var KUSIAK_ID    = 6; // 5
+var VAVRA_ID     = 7; // 6
+var ZAMPIC_ID     = 8;// 7
+var RENESANCE_ID = 9; // 8
+var HOSTEL_ID = 13;   // 9
+var KOUCKY_ID = 18;   // 10
+var CEPLECHA_ID = 19; // 11
+var VRBA_ID = 20;     // 12
+var HATY_ID = 21;     // 13
+var PREZIDENT_ID        = 22; // 14
+var TROSSKETOS_ID       = 23; // 15
+var VIVIENNE_ID         = 24; // 16
+var STARSIOSKLIVEJSI_ID = 25; // 17
+var MLADSIHEZCI_ID      = 26; // 18
+var PETKA_ID           = 27;  // 19
 
 var BOTTOM_FLOOR = 0,
     SECOND_FLOOR = 1,
@@ -80,17 +80,14 @@ var rooms = {
     "VAVRA": new Room("vavra", "Vavra", "Vávra",  "2 + 4",6, 4, SECOND_FLOOR, 1690, 1690, 1490, 1490, true, 51, VAVRA_ID, 2, true, false),
     "ZAMPIC": new Room("zampic", "Zampic", "Žampa",  "2 + 1",3, 3, SECOND_FLOOR, 1490, 1290, 1290, 990, true, 33, ZAMPIC_ID, 2, true, false),
     "RENESANCE": new Room("renesance", "KonferecniSal", "Konferen. sál","100 m2", 0, 7, BOTTOM_FLOOR, '?', '?','?', '?', true, 100, RENESANCE_ID, "moc", false, false),
-//permanently removed    "HOSTEL" : new Room("hostel", "hostel","Hostel", "moc", 0, 0, HOSTEL, 150, 150,150, 150, false, HOSTEL_ID, "moc", false, false),
+    "MURIDINDI" : new Room("muridindi", "muridindi","Muridindi", "moc", 0, 0, HOSTEL, 150, 150,150, 150, false, HOSTEL_ID, "moc", false, false),
     "KOUCKY": new Room("koucky", "Koucky", "Koucký",  "2 + 2",4, 4, BACK_HOUSE, 1690, 1690, 1490, 1490, false, 42, KOUCKY_ID, 2, KOUCKY_ID, 2, true, true),
     "CEPLECHA": new Room("ceplecha", "Ceplecha", "Ceplecha",  "2 + 2",4, 4, BACK_HOUSE, 1490, 1490, 1290, 1290, false, 30, CEPLECHA_ID, 2, true, true),
     "VRBA": new Room("vrba", "Vrba", "Vrba",  "2 + 2",4, 4, BACK_HOUSE, 1490, 1290, 1290, 990, false, 27, VRBA_ID, 2, true, true),
     "HATY": new Room("haty", "Haty", "Haty",  "2 + 2",4, 2, BACK_HOUSE, 1490, 1490, 1290, 1290, false, 27, HATY_ID, 2, true, true),
-
-//just name variation    "PREZIDENT":        new Room("prezident", "Prezident", "Prezidentský apartman Ferdinanda Vaňka", "4 + 2", 4, 4, HOSTEL, 1490, 1290, 1290, 990, false, 27, PREZIDENT_ID, 2, true, true),
     "PREZIDENT":        new Room("prezident", "Prezident", "Prezidentský apartmán", "4 + 2", 4, 4, HOSTEL, 1490, 1490, 1490, 990, false, 27, PREZIDENT_ID, 2, true, true),
     "TROSSKETOS":       new Room("trossketos", "Trossketos", "Tros Sketos", "2 + 2", 4, 1, HOSTEL, 1490, 1490, 1490, 990, false, 27, TROSSKETOS_ID, 2, true, true),
-//just name variation    "VIVIENNE":         new Room("vivienne", "Vivienne", "Vivienne", "2 + 2", 4, 4, HOSTEL, 1490, 1490, 1490, 990, false, 27, VIVIENNE_ID, 2, true, true),
-   "VIVIENNE":         new Room("vivienne", "Vivienne", "Vivienne Hatfieldová", "2 + 2", 4, 1, HOSTEL, 1490, 1490, 1490, 990, false, 27, VIVIENNE_ID, 2, true, true),
+    "VIVIENNE":         new Room("vivienne", "Vivienne", "Vivienne Hatfieldová", "2 + 2", 4, 1, HOSTEL, 1490, 1490, 1490, 990, false, 27, VIVIENNE_ID, 2, true, true),
     "STARSIOSKLIVEJSI": new Room("starsiosklivejsi", "Starsiosklivejsi", "Starší ošklivější", "2 + 2", 4, 1, HOSTEL, 1490, 1490, 1490, 990, false, 27, STARSIOSKLIVEJSI_ID, 2, true, true),
     "MLADSIHEZCI":      new Room("mladsihezci", "Mladsihezci", "Mladší hezčí", "2 + 2", 4, 1, HOSTEL, 1490, 1490, 1490, 990, false, 27, MLADSIHEZCI_ID, 2, true, true),
     "PETKA":           new Room("petka", "Petka", "Pětka", "2 + 2", 4, 1, HOSTEL, 1490, 1490, 1490, 990, false, 27, PETKA_ID, 2, true, true)
