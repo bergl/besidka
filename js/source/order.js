@@ -1,5 +1,5 @@
  var orderLoaded,
-     serverAddress = 'http://54.247.99.58/order/',
+     serverAddress = 'http://3.248.204.95/order/',
  //    serverAddress =  'http://test.besidka.cz/reservation_server/www/order/', 
     current_month = new Date();
 
