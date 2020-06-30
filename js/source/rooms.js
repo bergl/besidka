@@ -85,7 +85,7 @@ var rooms = {
     "CEPLECHA": new Room("ceplecha", "Ceplecha", "Ceplecha",  "2 + 2",4, 4, BACK_HOUSE, 1490, 1490, 1290, 1290, false, 30, CEPLECHA_ID, 2, true, true),
     "VRBA": new Room("vrba", "Vrba", "Vrba",  "2 + 2",4, 4, BACK_HOUSE, 1490, 1290, 1290, 990, false, 27, VRBA_ID, 2, true, true),
     "HATY": new Room("haty", "Haty", "Haty",  "2 + 2",4, 2, BACK_HOUSE, 1490, 1490, 1290, 1290, false, 27, HATY_ID, 2, true, true),
-    "PREZIDENT":        new Room("prezident", "Prezident", "Prezidentský apartmán", "4 + 2", 4, 4, HOSTEL, 1490, 1490, 1490, 990, false, 27, PREZIDENT_ID, 2, true, true),
+    "PREZIDENT":        new Room("prezident", "Prezident", "Prezidentský apartmán", "2 + 2", 4, 4, BOTTOM_FLOOR, 1490, 1490, 1490, 990, false, 60, PREZIDENT_ID, 2, true, true),
     "TROSSKETOS":       new Room("trossketos", "Trossketos", "Tros Sketos", "2 + 2", 4, 1, HOSTEL, 1490, 1490, 1490, 990, false, 27, TROSSKETOS_ID, 2, true, true),
     "VIVIENNE":         new Room("vivienne", "Vivienne", "Vivienne Hatfieldová", "2 + 2", 4, 1, HOSTEL, 1490, 1490, 1490, 990, false, 27, VIVIENNE_ID, 2, true, true),
     "STARSIOSKLIVEJSI": new Room("starsiosklivejsi", "Starsiosklivejsi", "Starší ošklivější", "2 + 2", 4, 1, HOSTEL, 1490, 1490, 1490, 990, false, 27, STARSIOSKLIVEJSI_ID, 2, true, true),

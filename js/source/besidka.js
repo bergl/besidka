@@ -501,7 +501,11 @@ function prepareRoom() {
 
     $(this).click(handleRoomClick);
     $(this).css('background-image', 'url(' + getRoomBGImage(room) + ')');
-    $(this).append("<div class='roomName'>" + getRoomFullName(room).toUpperCase() + "</div>");
+    if (getRoomFullName(room).length > 15) {
+        $(this).append("<div id='longName' class='roomName'>" + getRoomFullName(room).toUpperCase() + "</div>");
+    } else {
+        $(this).append("<div class='roomName'>" + getRoomFullName(room).toUpperCase() + "</div>");
+    }
 }
 
 function setImage (front) {

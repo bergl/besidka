@@ -263,6 +263,10 @@ div.roomName, div.nadpis {
     cursor: pointer;
 }
 
+div.small > div#longName{
+    margin-top: 100px;
+}
+
 div.room, div.opener, div.actionable {
     cursor: pointer;
 }
@@ -308,7 +312,7 @@ div.miniRoom {
         height: 152px;
     }
 
-    div.miniRoom > div {
+    div.miniRoom  > div {
         float: left;
         width: 180px;
         padding-left: 8px;
