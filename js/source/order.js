@@ -239,7 +239,7 @@ function showOrderOverview() {
 	 // iterate over rooms
          for (i = 0; i < roomsArray.length; i++) {
 
-	     if (i === 9) // skip muridindi
+	     if (i === 9 || i === 8) // skip muridindi & conf. room
 		 continue; 
 
              room = $("<div class='room'></div>");
